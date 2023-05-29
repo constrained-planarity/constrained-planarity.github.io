@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "Constrained Planarity"
+  description: "A comprehensive collection of contrained planarity variants."
+  repo-url: "https://github.com/N-Coder/constrained-planarity"
+  repo-actions: ["source"]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Overview
+      - problems.qmd
+      - about.qmd
+  search:
+    type: textbox
+
+bibliography: references.bib
+
+execute-dir: project
+filters:
+  - scripts/problemref.py
+
+format:
+  html:
+    theme: [styles.scss, cosmo]
+    toc: true

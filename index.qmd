@@ -1,0 +1,46 @@
+---
+execute:
+    eval: true
+    echo: false
+    freeze: false
+---
+
+<style>
+svg a {
+    text-decoration: none;
+}
+svg g.cluster text {
+    font-weight: bold;
+}
+</style>
+
+```{python}
+from scripts.hierarchy import dot, mermaid, ogdf
+```
+
+```{python}
+#| output: asis
+print("`"*3 + "{dot}")
+print("//| fig-width: NaN")
+print("//| fig-height: NaN")
+dot()
+print("`"*3)
+```
+
+```{python}
+dot()
+```
+
+```{python}
+#| output: asis
+print("`"*3 + "{mermaid}")
+print('%%{init: {"flowchart": {"htmlLabels": false}} }%%')
+mermaid()
+print("`"*3)
+```
+
+```{python}
+ogdf()
+```
+
+![Hierarchy](hierarchy.svg)

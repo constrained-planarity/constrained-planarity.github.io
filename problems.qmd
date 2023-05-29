@@ -1,0 +1,10 @@
+---
+title: "Problems"
+listing:
+  contents: problems
+  type: grid
+  fields: [image, title, description]
+  filter-ui: [title]
+---
+
+A list of constrained planarity problems
