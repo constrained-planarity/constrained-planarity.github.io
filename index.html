@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Constrained Planarity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Constrained Planarity</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Overview</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./problems.html" rel="" target="">
+ <span class="menu-text">Problems</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<style>
+svg a {
+    text-decoration: none;
+}
+svg g.cluster text {
+    font-weight: bold;
+}
+</style>
+<div class="cell" data-fig-width="NaN" data-fig-height="NaN">
+<div class="cell-output-display">
+<div>
+<div>
+<svg width="NaN" height="NaN" viewbox="0.00 0.00 858.00 1825.02" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1821.02)">
+<title>
+G
+</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1821.02 854,-1821.02 854,4 -4,4"></polygon> <g id="clust1" class="cluster">
+<title>
+cluster_P
+</title>
+<polygon fill="none" stroke="black" points="8,-779.43 8,-1809.02 673,-1809.02 673,-779.43 8,-779.43"></polygon> <text text-anchor="middle" x="659.99" y="-1788.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.00">P</text> </g> <g id="clust2" class="cluster">
+<title>
+cluster_ecfree
+</title>
+</g> <g id="clust4" class="cluster">
+<title>
+cluster_csefe2
+</title>
+</g> <g id="clust6" class="cluster">
+<title>
+cluster_X
+</title>
+<polygon fill="none" stroke="black" points="48,-689.83 48,-771.43 148,-771.43 148,-689.83 48,-689.83"></polygon> <text text-anchor="middle" x="136.01" y="-751.23" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.00">?</text> </g> <g id="clust7" class="cluster">
+<title>
+cluster_NPC
+</title>
+<polygon fill="none" stroke="black" points="39,-8 39,-681.83 754,-681.83 754,-8 39,-8"></polygon> <text text-anchor="middle" x="728.49" y="-661.63" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="18.00">NPC</text> </g> <g id="clust8" class="cluster">
+<title>
+cluster_sefe
+</title>
+</g> <!-- partrot --> <g id="node1" class="node">
+<title>
+partrot
+</title>
+<g id="a_node1"><a href="./problems/part-rot.html" title="Partial\nRotation\nPlanarity"> <ellipse fill="white" stroke="black" cx="120" cy="-1410" rx="47.11" ry="41.09"></ellipse> <text text-anchor="middle" x="120" y="-1422.6" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partial</text> <text text-anchor="middle" x="120" y="-1405.8" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Rotation</text> <text text-anchor="middle" x="120" y="-1389" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- partrotflip --> <g id="node18" class="node">
+<title>
+partrotflip
+</title>
+<g id="a_node18"><a href="./problems/part-rot-flip.html" title="Partial\nRotation\nPlanarity\nwith flips"> <ellipse fill="white" stroke="black" cx="203" cy="-1267.65" rx="48.98" ry="53.35"></ellipse> <text text-anchor="middle" x="203" y="-1288.65" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partial</text> <text text-anchor="middle" x="203" y="-1271.85" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Rotation</text> <text text-anchor="middle" x="203" y="-1255.05" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> <text text-anchor="middle" x="203" y="-1238.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">with flips</text> </a> </g> </g> <!-- partrot&#45;&gt;partrotflip --> <g id="edge3" class="edge">
+<title>
+partrot-&gt;partrotflip
+</title>
+<path fill="none" stroke="black" d="M141.37,-1372.85C150.58,-1357.29 161.52,-1338.78 171.62,-1321.71"></path> <polygon fill="black" stroke="black" points="174.73,-1323.33 176.81,-1312.94 168.7,-1319.77 174.73,-1323.33"></polygon> </g> <!-- partiallyemb --> <g id="node22" class="node">
+<title>
+partiallyemb
+</title>
+<g id="a_node22"><a href="./problems/partially-emb.html" title="Partially\nEmbedded\nPlanarity"> <ellipse fill="white" stroke="black" cx="322" cy="-1113.42" rx="53.8" ry="41.09"></ellipse> <text text-anchor="middle" x="322" y="-1126.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partially</text> <text text-anchor="middle" x="322" y="-1109.22" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedded</text> <text text-anchor="middle" x="322" y="-1092.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- partrot&#45;&gt;partiallyemb --> <g id="edge4" class="edge">
+<title>
+partrot-&gt;partiallyemb
+</title>
+<path fill="none" stroke="black" d="M149.77,-1377.67C157.83,-1370.23 166.86,-1362.75 176,-1356.82 210.42,-1334.5 233.68,-1351.43 261,-1320.82 299.63,-1277.54 313.84,-1210.84 319.04,-1165.05"></path> <polygon fill="black" stroke="black" points="322.53,-1165.34 320.08,-1155.03 315.57,-1164.62 322.53,-1165.34"></polygon> </g> <!-- ecfree --> <g id="node2" class="node">
+<title>
+ecfree
+</title>
+<g id="a_node2"><a href="./problems/ec-free.html" title="ec-\nPlanarity\nwith free\nedges"> <ellipse fill="white" stroke="black" cx="203" cy="-1113.42" rx="47.11" ry="53.35"></ellipse> <text text-anchor="middle" x="203" y="-1134.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">ec-</text> <text text-anchor="middle" x="203" y="-1117.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> <text text-anchor="middle" x="203" y="-1100.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">with free</text> <text text-anchor="middle" x="203" y="-1084.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">edges</text> </a> </g> </g> <!-- partpqcons --> <g id="node3" class="node">
+<title>
+partpqcons
+</title>
+<g id="a_node3"><a href="./problems/part-pq-cons.html" title="Partially\nPQ-\nconstrained\nPlanarity"> <ellipse fill="white" stroke="black" cx="81" cy="-1113.42" rx="56.89" ry="53.35"></ellipse> <text text-anchor="middle" x="81" y="-1134.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partially</text> <text text-anchor="middle" x="81" y="-1117.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">PQ-</text> <text text-anchor="middle" x="81" y="-1100.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">constrained</text> <text text-anchor="middle" x="81" y="-1084.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- ecfree&#45;&gt;partpqcons --> <g id="edge6" class="edge">
+<title>
+ecfree-&gt;partpqcons
+</title>
+<path fill="none" stroke="black" d="M155.91,-1115.42C150,-1115.42 144.09,-1115.42 138.19,-1115.42"></path> <path fill="none" stroke="transparent" d="M155.91,-1113.42C150,-1113.42 144.09,-1113.42 138.19,-1113.42"></path> <path fill="none" stroke="black" d="M155.91,-1111.42C150,-1111.42 144.09,-1111.42 138.19,-1111.42"></path> </g> <!-- synchronized --> <g id="node15" class="node">
+<title>
+synchronized
+</title>
+<g id="a_node15"><a href="./problems/synchronized.html" title="Synchronized\nPlanarity"> <ellipse fill="white" stroke="black" cx="203" cy="-816.84" rx="65.99" ry="29.33"></ellipse> <text text-anchor="middle" x="203" y="-821.04" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Synchronized</text> <text text-anchor="middle" x="203" y="-804.24" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- ecfree&#45;&gt;synchronized --> <g id="edge5" class="edge">
+<title>
+ecfree-&gt;synchronized
+</title>
+<path fill="none" stroke="black" d="M203,-1060.09C203,-1001.78 203,-908.85 203,-856.67"></path> <polygon fill="black" stroke="black" points="206.5,-856.49 203,-846.49 199.5,-856.49 206.5,-856.49"></polygon> </g> <!-- outer --> <g id="node4" class="node">
+<title>
+outer
+</title>
+<g id="a_node4"><a href="./problems/outer.html" title="Outer\nPlanarity"> <ellipse fill="white" stroke="black" cx="321" cy="-1742.01" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="321" y="-1746.21" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Outer</text> <text text-anchor="middle" x="321" y="-1729.41" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- standard --> <g id="node7" class="node">
+<title>
+standard
+</title>
+<g id="a_node7"><a href="./problems/standard.html" title="(Standard)\nPlanarity"> <ellipse fill="white" stroke="black" cx="321" cy="-1647.18" rx="53.19" ry="29.33"></ellipse> <text text-anchor="middle" x="321" y="-1651.38" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">(Standard)</text> <text text-anchor="middle" x="321" y="-1634.58" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- outer&#45;&gt;standard --> <g id="edge7" class="edge">
+<title>
+outer-&gt;standard
+</title>
+<path fill="none" stroke="black" d="M321,-1712.4C321,-1704.37 321,-1695.5 321,-1686.99"></path> <polygon fill="black" stroke="black" points="324.5,-1686.85 321,-1676.85 317.5,-1686.85 324.5,-1686.85"></polygon> </g> <!-- partial --> <g id="node5" class="node">
+<title>
+partial
+</title>
+<g id="a_node5"><a href="./problems/partial.html" title="Partial\nPlanarity"> <ellipse fill="white" stroke="black" cx="553" cy="-1540.47" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="553" y="-1544.67" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partial</text> <text text-anchor="middle" x="553" y="-1527.87" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- streamedbackbone --> <g id="node27" class="node">
+<title>
+streamedbackbone
+</title>
+<g id="a_node27"><a href="./problems/streamed-backbone.html" title="Streamed\nBackbone\nPlanarity"> <ellipse fill="white" stroke="black" cx="583" cy="-294.48" rx="50.79" ry="41.09"></ellipse> <text text-anchor="middle" x="583" y="-307.08" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Streamed</text> <text text-anchor="middle" x="583" y="-290.28" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Backbone</text> <text text-anchor="middle" x="583" y="-273.48" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- partial&#45;&gt;streamedbackbone --> <g id="edge8" class="edge">
+<title>
+partial-&gt;streamedbackbone
+</title>
+<path fill="none" stroke="black" d="M593.05,-1524.85C674.12,-1492.38 850,-1406.12 850,-1268.65 850,-1268.65 850,-1268.65 850,-590.05 850,-484.25 833.44,-442.77 755,-371.77 716.24,-336.68 690.05,-358.57 643,-335.77 638.32,-333.5 633.58,-330.91 628.93,-328.17"></path> <polygon fill="black" stroke="black" points="630.47,-325.01 620.13,-322.73 626.8,-330.96 630.47,-325.01"></polygon> </g> <!-- clustered --> <g id="node6" class="node">
+<title>
+clustered
+</title>
+<g id="a_node6"><a href="./problems/clustered.html" title="Clustered\nPlanarity"> <ellipse fill="white" stroke="black" cx="297" cy="-947.31" rx="49.01" ry="29.33"></ellipse> <text text-anchor="middle" x="297" y="-951.51" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Clustered</text> <text text-anchor="middle" x="297" y="-934.71" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- clustered&#45;&gt;synchronized --> <g id="edge11" class="edge">
+<title>
+clustered-&gt;synchronized
+</title>
+<path fill="none" stroke="black" d="M277.75,-920C263.62,-900.69 244.28,-874.25 228.81,-853.11"></path> <polygon fill="black" stroke="black" points="231.6,-851 222.87,-845 225.95,-855.14 231.6,-851"></polygon> </g> <!-- abg --> <g id="node28" class="node">
+<title>
+abg
+</title>
+<g id="a_node28"><a href="./problems/abg.html" title="⟨α, β,\nγ⟩-drawings"> <ellipse fill="white" stroke="black" cx="231" cy="-591.05" rx="63.05" ry="29.33"></ellipse> <text text-anchor="middle" x="231" y="-595.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">⟨α, β,</text> <text text-anchor="middle" x="231" y="-578.45" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">γ⟩-drawings</text> </a> </g> </g> <!-- clustered&#45;&gt;abg --> <g id="edge12" class="edge">
+<title>
+clustered-&gt;abg
+</title>
+<path fill="none" stroke="black" d="M294.91,-917.8C292.2,-884.44 286.75,-827.63 278,-779.43 268.53,-727.24 252.82,-668.03 242.2,-630.39"></path> <polygon fill="black" stroke="black" points="245.45,-629.03 239.35,-620.37 238.72,-630.94 245.45,-629.03"></polygon> </g> <!-- standard&#45;&gt;partrot --> <g id="edge14" class="edge">
+<title>
+standard-&gt;partrot
+</title>
+<path fill="none" stroke="black" d="M54,-1539.47C38.26,-1508.59 58.75,-1473.61 80.94,-1447.96"></path> <polygon fill="black" stroke="black" points="83.74,-1450.08 87.84,-1440.31 78.54,-1445.39 83.74,-1450.08"></polygon> </g> <!-- standard&#45;&gt;partial --> <g id="edge15" class="edge">
+<title>
+standard-&gt;partial
+</title>
+<path fill="none" stroke="black" d="M361.41,-1627.94C401.72,-1609.74 463.61,-1581.81 506.07,-1562.65"></path> <polygon fill="black" stroke="black" points="507.68,-1565.76 515.35,-1558.46 504.8,-1559.38 507.68,-1565.76"></polygon> </g> <!-- part2page --> <g id="node13" class="node">
+<title>
+part2page
+</title>
+<g id="a_node13"><a href="./problems/part-2-page.html" title="Partitioned\n2-page\nBook\nEmbedding"> <ellipse fill="white" stroke="black" cx="448" cy="-1267.65" rx="56.91" ry="53.35"></ellipse> <text text-anchor="middle" x="448" y="-1288.65" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partitioned</text> <text text-anchor="middle" x="448" y="-1271.85" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">2-page</text> <text text-anchor="middle" x="448" y="-1255.05" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Book</text> <text text-anchor="middle" x="448" y="-1238.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedding</text> </a> </g> </g> <!-- standard&#45;&gt;part2page --> <g id="edge16" class="edge">
+<title>
+standard-&gt;part2page
+</title>
+<path fill="none" stroke="black" d="M361.89,-1628.38C380.96,-1617.78 401.87,-1602.34 413,-1581.76 424.89,-1559.76 415.79,-1381.47 420,-1356.82 421.61,-1347.42 423.97,-1337.64 426.66,-1328.16"></path> <polygon fill="black" stroke="black" points="430.07,-1329 429.56,-1318.41 423.36,-1327 430.07,-1329"></polygon> </g> <!-- ec --> <g id="node16" class="node">
+<title>
+ec
+</title>
+<g id="a_node16"><a href="./problems/ec.html" title="ec-\nPlanarity"> <ellipse fill="white" stroke="black" cx="89" cy="-1267.65" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="89" y="-1271.85" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">ec-</text> <text text-anchor="middle" x="89" y="-1255.05" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- standard&#45;&gt;ec --> <g id="edge17" class="edge">
+<title>
+standard-&gt;ec
+</title>
+<path fill="none" stroke="black" d="M54,-1539.47C15.1,-1463.16 48.53,-1359.69 71.58,-1305.39"></path> <polygon fill="black" stroke="black" points="74.82,-1306.72 75.6,-1296.16 68.4,-1303.93 74.82,-1306.72"></polygon> <path fill="none" stroke="black" d="M268.06,-1644.29C202.51,-1638.64 94.57,-1617.6 54,-1541.47"></path> </g> <!-- level --> <g id="node19" class="node">
+<title>
+level
+</title>
+<g id="a_node19"><a href="./problems/level.html" title="Level\nPlanarity"> <ellipse fill="white" stroke="black" cx="219" cy="-1540.47" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="219" y="-1544.67" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Level</text> <text text-anchor="middle" x="219" y="-1527.87" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- standard&#45;&gt;level --> <g id="edge18" class="edge">
+<title>
+standard-&gt;level
+</title>
+<path fill="none" stroke="black" d="M296.31,-1620.83C282.32,-1606.47 264.71,-1588.39 249.82,-1573.11"></path> <polygon fill="black" stroke="black" points="252.25,-1570.58 242.76,-1565.86 247.23,-1575.46 252.25,-1570.58"></polygon> </g> <!-- propercl --> <g id="node8" class="node">
+<title>
+propercl
+</title>
+<g id="a_node8"><a href="./problems/proper-cl.html" title="Proper\nClustered\nLevel\nPlanarity"> <ellipse fill="white" stroke="black" cx="478" cy="-1410" rx="49.01" ry="53.35"></ellipse> <text text-anchor="middle" x="478" y="-1431" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Proper</text> <text text-anchor="middle" x="478" y="-1414.2" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Clustered</text> <text text-anchor="middle" x="478" y="-1397.4" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Level</text> <text text-anchor="middle" x="478" y="-1380.6" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- propertl --> <g id="node12" class="node">
+<title>
+propertl
+</title>
+<g id="a_node12"><a href="./problems/proper-tl.html" title="Proper\n𝒯-level\nPlanarity"> <ellipse fill="white" stroke="black" cx="598" cy="-1267.65" rx="47.11" ry="41.09"></ellipse> <text text-anchor="middle" x="598" y="-1280.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Proper</text> <text text-anchor="middle" x="598" y="-1263.45" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">𝒯-level</text> <text text-anchor="middle" x="598" y="-1246.65" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- propercl&#45;&gt;propertl --> <g id="edge19" class="edge">
+<title>
+propercl-&gt;propertl
+</title>
+<path fill="none" stroke="black" d="M511.11,-1370.27C527.45,-1351.16 547.14,-1328.13 563.65,-1308.82"></path> <polygon fill="black" stroke="black" points="566.44,-1310.95 570.27,-1301.08 561.12,-1306.4 566.44,-1310.95"></polygon> </g> <!-- clusteredlevel --> <g id="node31" class="node">
+<title>
+clusteredlevel
+</title>
+<g id="a_node31"><a href="./problems/clustered-level.html" title="Clustered\nLevel\nPlanarity"> <ellipse fill="white" stroke="black" cx="581" cy="-436.82" rx="49.01" ry="41.09"></ellipse> <text text-anchor="middle" x="581" y="-449.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Clustered</text> <text text-anchor="middle" x="581" y="-432.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Level</text> <text text-anchor="middle" x="581" y="-415.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- propercl&#45;&gt;clusteredlevel --> <g id="edge20" class="edge">
+<title>
+propercl-&gt;clusteredlevel
+</title>
+<path fill="none" stroke="black" d="M513.56,-1372.71C520.59,-1366.82 528.22,-1361.22 536,-1356.82 583.74,-1329.85 611.03,-1354.88 654,-1320.82 737.16,-1254.92 774,-1220.53 774,-1114.42 774,-1114.42 774,-1114.42 774,-714.83 774,-635.73 805.25,-598.96 755,-537.88 720.7,-496.19 684.51,-530.91 639,-501.88 629.7,-495.95 620.97,-488.14 613.23,-480.03"></path> <polygon fill="black" stroke="black" points="615.74,-477.58 606.42,-472.53 610.56,-482.29 615.74,-477.58"></polygon> </g> <!-- csefe2 --> <g id="node9" class="node">
+<title>
+csefe2
+</title>
+<g id="a_node9"><a href="./problems/c-sefe-2.html" title="Connected\nSEFE-2"> <ellipse fill="white" stroke="black" cx="468" cy="-1113.42" rx="53.8" ry="29.33"></ellipse> <text text-anchor="middle" x="468" y="-1117.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Connected</text> <text text-anchor="middle" x="468" y="-1100.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">SEFE-2</text> </a> </g> </g> <!-- csefe2&#45;&gt;clustered --> <g id="edge21" class="edge">
+<title>
+csefe2-&gt;clustered
+</title>
+<path fill="none" stroke="black" d="M450.47,-1085.41C440,-1070.77 425.71,-1053.12 410,-1040.37 388.71,-1023.08 376.79,-1029.03 355,-1012.37 343.7,-1003.72 332.81,-992.69 323.58,-982.23"></path> <polygon fill="black" stroke="black" points="326.03,-979.71 316.87,-974.39 320.72,-984.26 326.03,-979.71"></polygon> </g> <!-- parttcoh2page --> <g id="node10" class="node">
+<title>
+parttcoh2page
+</title>
+<g id="a_node10"><a href="./problems/part-tcoh-2-page.html" title="Partitioned\n𝒯-coherent\n2-page\nBook\nEmbedding"> <ellipse fill="white" stroke="black" cx="598" cy="-1113.42" rx="58.68" ry="65.11"></ellipse> <text text-anchor="middle" x="598" y="-1142.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partitioned</text> <text text-anchor="middle" x="598" y="-1126.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">𝒯-coherent</text> <text text-anchor="middle" x="598" y="-1109.22" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">2-page</text> <text text-anchor="middle" x="598" y="-1092.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Book</text> <text text-anchor="middle" x="598" y="-1075.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedding</text> </a> </g> </g> <!-- csefe2&#45;&gt;parttcoh2page --> <g id="edge22" class="edge">
+<title>
+csefe2-&gt;parttcoh2page
+</title>
+<path fill="none" stroke="black" d="M521.83,-1111.42C527.68,-1111.42 533.53,-1111.42 539.38,-1111.42"></path> <path fill="none" stroke="transparent" d="M521.83,-1113.42C527.68,-1113.42 533.53,-1113.42 539.38,-1113.42"></path> <path fill="none" stroke="black" d="M521.83,-1115.42C527.68,-1115.42 533.53,-1115.42 539.38,-1115.42"></path> </g> <!-- part3page --> <g id="node26" class="node">
+<title>
+part3page
+</title>
+<g id="a_node26"><a href="./problems/part-3-page.html" title="Partitioned\n3-Page\nBook\nEmbedding"> <ellipse fill="white" stroke="black" cx="577" cy="-591.05" rx="56.91" ry="53.35"></ellipse> <text text-anchor="middle" x="577" y="-612.05" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partitioned</text> <text text-anchor="middle" x="577" y="-595.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">3-Page</text> <text text-anchor="middle" x="577" y="-578.45" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Book</text> <text text-anchor="middle" x="577" y="-561.65" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedding</text> </a> </g> </g> <!-- parttcoh2page&#45;&gt;part3page --> <g id="edge13" class="edge">
+<title>
+parttcoh2page-&gt;part3page
+</title>
+<path fill="none" stroke="black" d="M595.41,-1048.35C591.36,-947.86 583.55,-754.4 579.53,-654.76"></path> <polygon fill="black" stroke="black" points="583.02,-654.39 579.12,-644.54 576.02,-654.67 583.02,-654.39"></polygon> </g> <!-- rcinodetrix --> <g id="node11" class="node">
+<title>
+rcinodetrix
+</title>
+<g id="a_node11"><a href="./problems/rci-nodetrix.html" title="Row-\nColumn-\nIndependent\nNodeTrix\nPlanarity"> <ellipse fill="white" stroke="black" cx="424" cy="-947.31" rx="60.48" ry="65.11"></ellipse> <text text-anchor="middle" x="424" y="-976.71" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Row-</text> <text text-anchor="middle" x="424" y="-959.91" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Column-</text> <text text-anchor="middle" x="424" y="-943.11" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Independent</text> <text text-anchor="middle" x="424" y="-926.31" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">NodeTrix</text> <text text-anchor="middle" x="424" y="-909.51" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- rcinodetrix&#45;&gt;synchronized --> <g id="edge24" class="edge">
+<title>
+rcinodetrix-&gt;synchronized
+</title>
+<path fill="none" stroke="black" d="M380.6,-901.86C372.48,-894.79 363.78,-887.94 355,-882.26 327.12,-864.21 293.33,-849.3 264.69,-838.38"></path> <polygon fill="black" stroke="black" points="265.79,-835.06 255.19,-834.84 263.34,-841.61 265.79,-835.06"></polygon> </g> <!-- nodetrix --> <g id="node35" class="node">
+<title>
+nodetrix
+</title>
+<g id="a_node35"><a href="./problems/nodetrix.html" title="NodeTrix\nPlanarity"> <ellipse fill="white" stroke="black" cx="362" cy="-591.05" rx="49.6" ry="29.33"></ellipse> <text text-anchor="middle" x="362" y="-595.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">NodeTrix</text> <text text-anchor="middle" x="362" y="-578.45" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- rcinodetrix&#45;&gt;nodetrix --> <g id="edge25" class="edge">
+<title>
+rcinodetrix-&gt;nodetrix
+</title>
+<path fill="none" stroke="black" d="M412.92,-882.98C400.07,-809.6 379.33,-691.06 368.72,-630.43"></path> <polygon fill="black" stroke="black" points="372.15,-629.76 366.98,-620.51 365.26,-630.97 372.15,-629.76"></polygon> </g> <!-- propertl&#45;&gt;parttcoh2page --> <g id="edge27" class="edge">
+<title>
+propertl-&gt;parttcoh2page
+</title>
+<path fill="none" stroke="black" d="M598,-1226.25C598,-1214.72 598,-1201.76 598,-1188.87"></path> <polygon fill="black" stroke="black" points="601.5,-1188.58 598,-1178.58 594.5,-1188.58 601.5,-1188.58"></polygon> </g> <!-- tlevel --> <g id="node30" class="node">
+<title>
+tlevel
+</title>
+<g id="a_node30"><a href="./problems/t-level.html" title="𝒯-level\nPlanarity"> <ellipse fill="white" stroke="black" cx="699" cy="-591.05" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="699" y="-595.25" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">𝒯-level</text> <text text-anchor="middle" x="699" y="-578.45" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- propertl&#45;&gt;tlevel --> <g id="edge28" class="edge">
+<title>
+propertl-&gt;tlevel
+</title>
+<path fill="none" stroke="black" d="M631.2,-1238.35C645.36,-1224.29 660.55,-1206.11 669,-1186.47 711,-1088.87 690,-1054.57 690,-948.31 690,-948.31 690,-948.31 690,-815.84 690,-750.87 693.83,-675.36 696.5,-630.76"></path> <polygon fill="black" stroke="black" points="700,-630.85 697.11,-620.65 693.01,-630.42 700,-630.85"></polygon> </g> <!-- part2page&#45;&gt;parttcoh2page --> <g id="edge29" class="edge">
+<title>
+part2page-&gt;parttcoh2page
+</title>
+<path fill="none" stroke="black" d="M487.69,-1229.14C501.55,-1215.83 517.11,-1200.63 531,-1186.47 537.02,-1180.34 543.26,-1173.83 549.4,-1167.34"></path> <polygon fill="black" stroke="black" points="552.25,-1169.42 556.55,-1159.74 547.15,-1164.63 552.25,-1169.42"></polygon> </g> <!-- strip --> <g id="node14" class="node">
+<title>
+strip
+</title>
+<g id="a_node14"><a href="./problems/strip.html" title="Strip\nPlanarity"> <ellipse fill="white" stroke="black" cx="344" cy="-1410" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="344" y="-1414.2" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Strip</text> <text text-anchor="middle" x="344" y="-1397.4" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- strip&#45;&gt;clustered --> <g id="edge35" class="edge">
+<title>
+strip-&gt;clustered
+</title>
+<path fill="none" stroke="black" d="M338.49,-1380.6C334.1,-1351.54 330.66,-1305.54 344,-1268.65"></path> </g> <!-- sefe2 --> <g id="node23" class="node">
+<title>
+sefe2
+</title>
+<g id="a_node23"><a href="./problems/sefe-2.html" title="SEFE-2"> <ellipse fill="white" stroke="black" cx="98" cy="-715.83" rx="41.74" ry="18"></ellipse> <text text-anchor="middle" x="98" y="-711.63" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">SEFE-2</text> </a> </g> </g> <!-- synchronized&#45;&gt;sefe2 --> <g id="edge36" class="edge">
+<title>
+synchronized-&gt;sefe2
+</title>
+<path fill="none" stroke="black" d="M175.41,-789.83C158.81,-774.17 137.87,-754.43 121.96,-739.42"></path> <polygon fill="black" stroke="black" points="124.27,-736.79 114.6,-732.48 119.47,-741.89 124.27,-736.79"></polygon> </g> <!-- ec&#45;&gt;ecfree --> <g id="edge37" class="edge">
+<title>
+ec-&gt;ecfree
+</title>
+<path fill="none" stroke="black" d="M108.34,-1240.82C124.27,-1219.55 147.32,-1188.77 166.68,-1162.92"></path> <polygon fill="black" stroke="black" points="169.63,-1164.82 172.82,-1154.72 164.03,-1160.62 169.63,-1164.82"></polygon> </g> <!-- ec&#45;&gt;partiallyemb --> <g id="edge38" class="edge">
+<title>
+ec-&gt;partiallyemb
+</title>
+<path fill="none" stroke="black" d="M110.83,-1241.3C120.41,-1231.6 132.35,-1221.26 145,-1214.47 192.11,-1189.19 216.58,-1214.68 262,-1186.47 273.46,-1179.36 283.79,-1169.3 292.52,-1158.94"></path> <polygon fill="black" stroke="black" points="295.35,-1161.01 298.87,-1151.02 289.89,-1156.63 295.35,-1161.01"></polygon> </g> <!-- stripemb --> <g id="node17" class="node">
+<title>
+stripemb
+</title>
+<g id="a_node17"><a href="./problems/strip-emb.html" title="(Embedded)\nStrip\nPlanarity"> <ellipse fill="white" stroke="black" cx="344" cy="-1540.47" rx="60.48" ry="41.09"></ellipse> <text text-anchor="middle" x="344" y="-1553.07" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">(Embedded)</text> <text text-anchor="middle" x="344" y="-1536.27" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Strip</text> <text text-anchor="middle" x="344" y="-1519.47" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- stripemb&#45;&gt;strip --> <g id="edge39" class="edge">
+<title>
+stripemb-&gt;strip
+</title>
+<path fill="none" stroke="black" d="M344,-1499.17C344,-1483.51 344,-1465.62 344,-1450.08"></path> <polygon fill="black" stroke="black" points="347.5,-1449.74 344,-1439.74 340.5,-1449.74 347.5,-1449.74"></polygon> </g> <!-- upwemb --> <g id="node20" class="node">
+<title>
+upwemb
+</title>
+<g id="a_node20"><a href="./problems/upw-emb.html" title="(Embedded)\nUpward\nPlanarity"> <ellipse fill="white" stroke="black" cx="605" cy="-1410" rx="60.48" ry="41.09"></ellipse> <text text-anchor="middle" x="605" y="-1422.6" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">(Embedded)</text> <text text-anchor="middle" x="605" y="-1405.8" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Upward</text> <text text-anchor="middle" x="605" y="-1389" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- stripemb&#45;&gt;upwemb --> <g id="edge40" class="edge">
+<title>
+stripemb-&gt;upwemb
+</title>
+<path fill="none" stroke="black" d="M398.33,-1522.28C437.78,-1508.76 491.77,-1488.07 536,-1463.17 543.62,-1458.88 551.34,-1453.84 558.73,-1448.62"></path> <polygon fill="black" stroke="black" points="561.19,-1451.16 567.21,-1442.44 557.07,-1445.5 561.19,-1451.16"></polygon> </g> <!-- partrotflip&#45;&gt;ecfree --> <g id="edge41" class="edge">
+<title>
+partrotflip-&gt;ecfree
+</title>
+<path fill="none" stroke="black" d="M203,-1214.26C203,-1202.23 203,-1189.33 203,-1176.92"></path> <polygon fill="black" stroke="black" points="206.5,-1176.65 203,-1166.65 199.5,-1176.65 206.5,-1176.65"></polygon> </g> <!-- level&#45;&gt;propercl --> <g id="edge42" class="edge">
+<title>
+level-&gt;propercl
+</title>
+<path fill="none" stroke="black" d="M246.87,-1516.55C255.5,-1510.26 265.3,-1503.88 275,-1499.17 327.01,-1473.92 347.57,-1487.53 400,-1463.17 409.84,-1458.6 419.84,-1452.87 429.25,-1446.9"></path> <polygon fill="black" stroke="black" points="431.25,-1449.78 437.71,-1441.38 427.42,-1443.92 431.25,-1449.78"></polygon> </g> <!-- level&#45;&gt;strip --> <g id="edge43" class="edge">
+<title>
+level-&gt;strip
+</title>
+<path fill="none" stroke="black" d="M242.81,-1515C262.66,-1494.59 291.11,-1465.36 312.79,-1443.08"></path> <polygon fill="black" stroke="black" points="315.39,-1445.42 319.86,-1435.81 310.37,-1440.54 315.39,-1445.42"></polygon> </g> <!-- radiallevel --> <g id="node21" class="node">
+<title>
+radiallevel
+</title>
+<g id="a_node21"><a href="./problems/radial-level.html" title="Radial\nLevel\nPlanarity"> <ellipse fill="white" stroke="black" cx="232" cy="-1410" rx="47.11" ry="41.09"></ellipse> <text text-anchor="middle" x="232" y="-1422.6" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Radial</text> <text text-anchor="middle" x="232" y="-1405.8" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Level</text> <text text-anchor="middle" x="232" y="-1389" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- level&#45;&gt;radiallevel --> <g id="edge44" class="edge">
+<title>
+level-&gt;radiallevel
+</title>
+<path fill="none" stroke="black" d="M221.89,-1510.95C223.35,-1496.51 225.17,-1478.53 226.86,-1461.81"></path> <polygon fill="black" stroke="black" points="230.37,-1461.91 227.89,-1451.61 223.4,-1461.21 230.37,-1461.91"></polygon> </g> <!-- upward --> <g id="node36" class="node">
+<title>
+upward
+</title>
+<g id="a_node36"><a href="./problems/upward.html" title="Upward\nPlanarity"> <ellipse fill="white" stroke="black" cx="699" cy="-294.48" rx="47.11" ry="29.33"></ellipse> <text text-anchor="middle" x="699" y="-298.68" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Upward</text> <text text-anchor="middle" x="699" y="-281.88" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- upwemb&#45;&gt;upward --> <g id="edge45" class="edge">
+<title>
+upwemb-&gt;upward
+</title>
+<path fill="none" stroke="black" d="M648.72,-1381.44C671.18,-1365.71 697.78,-1344.43 717,-1320.82 780.75,-1242.51 812,-1215.4 812,-1114.42 812,-1114.42 812,-1114.42 812,-590.05 812,-489.78 798.1,-462.3 755,-371.77 747.82,-356.68 737.5,-341.54 727.67,-328.76"></path> <polygon fill="black" stroke="black" points="730.28,-326.41 721.33,-320.74 724.79,-330.75 730.28,-326.41"></polygon> </g> <!-- radiallevel&#45;&gt;clustered --> <g id="edge47" class="edge">
+<title>
+radiallevel-&gt;clustered
+</title>
+<path fill="none" stroke="black" d="M344,-1266.65C357.61,-1229.01 375.63,-1225.38 385,-1186.47 400.21,-1123.34 410.88,-1099.92 385,-1040.37 377.73,-1023.64 367.8,-1025.36 355,-1012.37 345.27,-1002.49 335,-991.39 325.86,-981.24"></path> <polygon fill="black" stroke="black" points="328.39,-978.82 319.11,-973.71 323.17,-983.49 328.39,-978.82"></polygon> <path fill="none" stroke="black" d="M264.92,-1380.2C291.98,-1354.17 328.33,-1313.2 344,-1268.65"></path> </g> <!-- partiallyemb&#45;&gt;clustered --> <g id="edge48" class="edge">
+<title>
+partiallyemb-&gt;clustered
+</title>
+<path fill="none" stroke="black" d="M315.88,-1072.27C311.92,-1046.25 306.79,-1012.55 302.87,-986.85"></path> <polygon fill="black" stroke="black" points="306.29,-986.09 301.33,-976.73 299.37,-987.14 306.29,-986.09"></polygon> </g> <!-- sefe3 --> <g id="node32" class="node">
+<title>
+sefe3
+</title>
+<g id="a_node32"><a href="./problems/sefe-3.html" title="SEFE-3"> <ellipse fill="white" stroke="black" cx="463" cy="-294.48" rx="41.74" ry="18"></ellipse> <text text-anchor="middle" x="463" y="-290.28" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">SEFE-3</text> </a> </g> </g> <!-- sefe2&#45;&gt;sefe3 --> <g id="edge30" class="edge">
+<title>
+sefe2-&gt;sefe3
+</title>
+<path fill="none" stroke="black" d="M65.37,-704.55C54.74,-699.48 44.11,-692.16 38,-681.83 5.44,-626.76 5.87,-593.2 38,-537.88 121.27,-394.52 324.62,-328.85 416.54,-305.74"></path> <polygon fill="black" stroke="black" points="417.52,-309.11 426.39,-303.32 415.85,-302.31 417.52,-309.11"></polygon> </g> <!-- maxsefe --> <g id="node37" class="node">
+<title>
+maxsefe
+</title>
+<g id="a_node37"><a href="./problems/max-sefe.html" title="MaxSEFE"> <ellipse fill="white" stroke="black" cx="98" cy="-591.05" rx="51.05" ry="18"></ellipse> <text text-anchor="middle" x="98" y="-586.85" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">MaxSEFE</text> </a> </g> </g> <!-- sefe2&#45;&gt;maxsefe --> <g id="edge31" class="edge">
+<title>
+sefe2-&gt;maxsefe
+</title>
+<path fill="none" stroke="black" d="M98,-697.76C98,-677.53 98,-643.56 98,-619.59"></path> <polygon fill="black" stroke="black" points="101.5,-619.37 98,-609.37 94.5,-619.37 101.5,-619.37"></polygon> </g> <!-- sefe --> <g id="node24" class="node">
+<title>
+sefe
+</title>
+<g id="a_node24"><a href="./problems/sefe.html" title="Simultaneous\nEmbedding\nwith Fixed\nEdges"> <ellipse fill="white" stroke="black" cx="583" cy="-164.01" rx="65.42" ry="53.35"></ellipse> <text text-anchor="middle" x="583" y="-185.01" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Simultaneous</text> <text text-anchor="middle" x="583" y="-168.21" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedding</text> <text text-anchor="middle" x="583" y="-151.41" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">with Fixed</text> <text text-anchor="middle" x="583" y="-134.61" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Edges</text> </a> </g> </g> <!-- weakrealizeab --> <g id="node25" class="node">
+<title>
+weakrealizeab
+</title>
+<g id="a_node25"><a href="./problems/weak-realizeab.html" title="Weak\nRealizability"> <ellipse fill="white" stroke="black" cx="438" cy="-164.01" rx="61.79" ry="29.33"></ellipse> <text text-anchor="middle" x="438" y="-168.21" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Weak</text> <text text-anchor="middle" x="438" y="-151.41" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Realizability</text> </a> </g> </g> <!-- sefe&#45;&gt;weakrealizeab --> <g id="edge2" class="edge">
+<title>
+sefe-&gt;weakrealizeab
+</title>
+<path fill="none" stroke="black" d="M517.52,-166.01C511.69,-166.01 505.86,-166.01 500.02,-166.01"></path> <path fill="none" stroke="transparent" d="M517.52,-164.01C511.69,-164.01 505.86,-164.01 500.02,-164.01"></path> <path fill="none" stroke="black" d="M517.52,-162.01C511.69,-162.01 505.86,-162.01 500.02,-162.01"></path> </g> <!-- hierarchical --> <g id="node38" class="node">
+<title>
+hierarchical
+</title>
+<g id="a_node38"><a href="./problems/hierarchical.html" title="Hierarchical\nPlanarity"> <ellipse fill="white" stroke="black" cx="583" cy="-45.42" rx="60.45" ry="29.33"></ellipse> <text text-anchor="middle" x="583" y="-49.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Hierarchical</text> <text text-anchor="middle" x="583" y="-32.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- sefe&#45;&gt;hierarchical --> <g id="edge1" class="edge">
+<title>
+sefe-&gt;hierarchical
+</title>
+<path fill="none" stroke="black" d="M583,-110.51C583,-102.02 583,-93.36 583,-85.27"></path> <polygon fill="black" stroke="black" points="586.5,-85.02 583,-75.02 579.5,-85.02 586.5,-85.02"></polygon> </g> <!-- parttcoh3page --> <g id="node34" class="node">
+<title>
+parttcoh3page
+</title>
+<g id="a_node34"><a href="./problems/part-tcoh-3-page.html" title="Partitioned\n𝒯-coherent\n3-page\nBook\nEmbedding"> <ellipse fill="white" stroke="black" cx="455" cy="-436.82" rx="58.68" ry="65.11"></ellipse> <text text-anchor="middle" x="455" y="-466.22" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Partitioned</text> <text text-anchor="middle" x="455" y="-449.42" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">𝒯-coherent</text> <text text-anchor="middle" x="455" y="-432.62" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">3-page</text> <text text-anchor="middle" x="455" y="-415.82" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Book</text> <text text-anchor="middle" x="455" y="-399.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Embedding</text> </a> </g> </g> <!-- part3page&#45;&gt;parttcoh3page --> <g id="edge9" class="edge">
+<title>
+part3page-&gt;parttcoh3page
+</title>
+<path fill="none" stroke="black" d="M543.34,-548.05C529.95,-531.34 514.33,-511.86 499.99,-493.96"></path> <polygon fill="black" stroke="black" points="502.49,-491.48 493.5,-485.87 497.03,-495.86 502.49,-491.48"></polygon> </g> <!-- streamedbackbone&#45;&gt;sefe --> <g id="edge10" class="edge">
+<title>
+streamedbackbone-&gt;sefe
+</title>
+<path fill="none" stroke="black" d="M583,-253.18C583,-245.03 583,-236.29 583,-227.59"></path> <polygon fill="black" stroke="black" points="586.5,-227.43 583,-217.43 579.5,-227.43 586.5,-227.43"></polygon> </g> <!-- book --> <g id="node29" class="node">
+<title>
+book
+</title>
+<g id="a_node29"><a href="./problems/book.html" title="Book?"> <ellipse fill="white" stroke="black" cx="466" cy="-591.05" rx="36.5" ry="18"></ellipse> <text text-anchor="middle" x="466" y="-586.85" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Book?</text> </a> </g> </g> <!-- clusteredlevel&#45;&gt;sefe3 --> <g id="edge23" class="edge">
+<title>
+clusteredlevel-&gt;sefe3
+</title>
+<path fill="none" stroke="black" d="M553.04,-402.56C531.55,-377.01 502.38,-342.32 483.14,-319.43"></path> <polygon fill="black" stroke="black" points="485.65,-316.98 476.54,-311.58 480.29,-321.48 485.65,-316.98"></polygon> </g> <!-- sefe3&#45;&gt;sefe --> <g id="edge26" class="edge">
+<title>
+sefe3-&gt;sefe
+</title>
+<path fill="none" stroke="black" d="M477.96,-277.46C492.69,-261.69 515.96,-236.78 536.86,-214.4"></path> <polygon fill="black" stroke="black" points="539.57,-216.63 543.84,-206.93 534.46,-211.85 539.57,-216.63"></polygon> </g> <!-- streamed --> <g id="node33" class="node">
+<title>
+streamed
+</title>
+<g id="a_node33"><a href="./problems/streamed.html" title="Streamed\nPlanarity"> <ellipse fill="white" stroke="black" cx="697" cy="-436.82" rx="48.9" ry="29.33"></ellipse> <text text-anchor="middle" x="697" y="-441.02" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Streamed</text> <text text-anchor="middle" x="697" y="-424.22" font-family="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="14.00">Planarity</text> </a> </g> </g> <!-- streamed&#45;&gt;streamedbackbone --> <g id="edge32" class="edge">
+<title>
+streamed-&gt;streamedbackbone
+</title>
+<path fill="none" stroke="black" d="M676.09,-410.08C659.52,-389.68 636.03,-360.76 616.79,-337.07"></path> <polygon fill="black" stroke="black" points="619.47,-334.82 610.44,-329.26 614.03,-339.23 619.47,-334.82"></polygon> </g> <!-- parttcoh3page&#45;&gt;streamedbackbone --> <g id="edge33" class="edge">
+<title>
+parttcoh3page-&gt;streamedbackbone
+</title>
+<path fill="none" stroke="black" d="M496.56,-390.26C512.51,-372.77 530.59,-352.94 546.08,-335.96"></path> <polygon fill="black" stroke="black" points="548.84,-338.12 553,-328.37 543.67,-333.4 548.84,-338.12"></polygon> </g> <!-- parttcoh3page&#45;&gt;sefe3 --> <g id="edge34" class="edge">
+<title>
+parttcoh3page-&gt;sefe3
+</title>
+<path fill="none" stroke="black" d="M458.65,-371.81C459.62,-354.7 460.63,-337.09 461.43,-323.1"></path> <polygon fill="black" stroke="black" points="464.94,-322.93 462.02,-312.74 457.95,-322.53 464.94,-322.93"></polygon> </g> <!-- upward&#45;&gt;sefe --> <g id="edge46" class="edge">
+<title>
+upward-&gt;sefe
+</title>
+<path fill="none" stroke="black" d="M676.36,-268.4C662.63,-253.19 644.62,-233.25 628.09,-214.94"></path> <polygon fill="black" stroke="black" points="630.41,-212.29 621.11,-207.21 625.22,-216.98 630.41,-212.29"></polygon> </g> </g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>digraph G {
+    concentrate=true;
+    fontname="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
+    fontsize=18;
+    lheight=0;
+    node [fontname="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif", fillcolor="white", style="filled"];
+    subgraph cluster_P {
+        label="P";
+        labeljust=r;
+        partrot [label="Partial\nRotation\nPlanarity", href="/problems/part-rot.html"];
+        subgraph cluster_ecfree {
+            label="";
+            style="invis";
+            { rank=same ecfree partpqcons }
+            ecfree [label="ec-\nPlanarity\nwith free\nedges", href="/problems/ec-free.html"];
+            partpqcons [label="Partially\nPQ-\nconstrained\nPlanarity", href="/problems/part-pq-cons.html"];
+        }
+        outer [label="Outer\nPlanarity", href="/problems/outer.html"];
+        partial [label="Partial\nPlanarity", href="/problems/partial.html"];
+        clustered [label="Clustered\nPlanarity", href="/problems/clustered.html"];
+        standard [label="(Standard)\nPlanarity", href="/problems/standard.html"];
+        propercl [label="Proper\nClustered\nLevel\nPlanarity", href="/problems/proper-cl.html"];
+        subgraph cluster_csefe2 {
+            label="";
+            style="invis";
+            { rank=same csefe2 parttcoh2page }
+            csefe2 [label="Connected\nSEFE-2", href="/problems/c-sefe-2.html"];
+            parttcoh2page [label="Partitioned\n𝒯-coherent\n2-page\nBook\nEmbedding", href="/problems/part-tcoh-2-page.html"];
+        }
+        rcinodetrix [label="Row-\nColumn-\nIndependent\nNodeTrix\nPlanarity", href="/problems/rci-nodetrix.html"];
+        propertl [label="Proper\n𝒯-level\nPlanarity", href="/problems/proper-tl.html"];
+        part2page [label="Partitioned\n2-page\nBook\nEmbedding", href="/problems/part-2-page.html"];
+        strip [label="Strip\nPlanarity", href="/problems/strip.html"];
+        synchronized [label="Synchronized\nPlanarity", href="/problems/synchronized.html"];
+        ec [label="ec-\nPlanarity", href="/problems/ec.html"];
+        stripemb [label="(Embedded)\nStrip\nPlanarity", href="/problems/strip-emb.html"];
+        partrotflip [label="Partial\nRotation\nPlanarity\nwith flips", href="/problems/part-rot-flip.html"];
+        level [label="Level\nPlanarity", href="/problems/level.html"];
+        upwemb [label="(Embedded)\nUpward\nPlanarity", href="/problems/upw-emb.html"];
+        radiallevel [label="Radial\nLevel\nPlanarity", href="/problems/radial-level.html"];
+        partiallyemb [label="Partially\nEmbedded\nPlanarity", href="/problems/partially-emb.html"];
+    }
+    subgraph cluster_X {
+        label="?";
+        labeljust=r;
+        sefe2 [label="SEFE-2", href="/problems/sefe-2.html"];
+    }
+    subgraph cluster_NPC {
+        label="NPC";
+        labeljust=r;
+        subgraph cluster_sefe {
+            label="";
+            style="invis";
+            { rank=same sefe weakrealizeab }
+            sefe [label="Simultaneous\nEmbedding\nwith Fixed\nEdges", href="/problems/sefe.html"];
+            weakrealizeab [label="Weak\nRealizability", href="/problems/weak-realizeab.html"];
+        }
+        part3page [label="Partitioned\n3-Page\nBook\nEmbedding", href="/problems/part-3-page.html"];
+        streamedbackbone [label="Streamed\nBackbone\nPlanarity", href="/problems/streamed-backbone.html"];
+        abg [label="⟨α, β,\nγ⟩-drawings", href="/problems/abg.html"];
+        book [label="Book?", href="/problems/book.html"];
+        tlevel [label="𝒯-level\nPlanarity", href="/problems/t-level.html"];
+        clusteredlevel [label="Clustered\nLevel\nPlanarity", href="/problems/clustered-level.html"];
+        sefe3 [label="SEFE-3", href="/problems/sefe-3.html"];
+        streamed [label="Streamed\nPlanarity", href="/problems/streamed.html"];
+        parttcoh3page [label="Partitioned\n𝒯-coherent\n3-page\nBook\nEmbedding", href="/problems/part-tcoh-3-page.html"];
+        nodetrix [label="NodeTrix\nPlanarity", href="/problems/nodetrix.html"];
+        upward [label="Upward\nPlanarity", href="/problems/upward.html"];
+        maxsefe [label="MaxSEFE", href="/problems/max-sefe.html"];
+        hierarchical [label="Hierarchical\nPlanarity", href="/problems/hierarchical.html"];
+    }
+
+    sefe -&gt; { hierarchical };
+    sefe -&gt; { weakrealizeab } [dir=none, constraint=false, color="black:invis:black"];
+    partrot -&gt; { partiallyemb , partrotflip };
+    ecfree -&gt; { synchronized };
+    ecfree -&gt; { partpqcons } [dir=none, constraint=false, color="black:invis:black"];
+    outer -&gt; { standard };
+    partial -&gt; { streamedbackbone };
+    part3page -&gt; { parttcoh3page };
+    streamedbackbone -&gt; { sefe };
+    clustered -&gt; { synchronized , abg };
+    parttcoh2page -&gt; { part3page };
+    standard -&gt; { level , part2page , ec , partrot , partial };
+    propercl -&gt; { clusteredlevel , propertl };
+    csefe2 -&gt; { clustered };
+    csefe2 -&gt; { parttcoh2page } [dir=none, constraint=false, color="black:invis:black"];
+    clusteredlevel -&gt; { sefe3 };
+    rcinodetrix -&gt; { synchronized , nodetrix };
+    sefe3 -&gt; { sefe };
+    propertl -&gt; { tlevel , parttcoh2page };
+    part2page -&gt; { parttcoh2page };
+    sefe2 -&gt; { maxsefe , sefe3 };
+    streamed -&gt; { streamedbackbone };
+    parttcoh3page -&gt; { sefe3 , streamedbackbone };
+    strip -&gt; { clustered };
+    synchronized -&gt; { sefe2 };
+    ec -&gt; { partiallyemb , ecfree };
+    stripemb -&gt; { upwemb , strip };
+    partrotflip -&gt; { ecfree };
+    level -&gt; { propercl , strip , radiallevel };
+    upwemb -&gt; { upward };
+    upward -&gt; { sefe };
+    radiallevel -&gt; { clustered };
+    partiallyemb -&gt; { clustered };
+}</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart TB
+    sefe["Simultaneous\nEmbedding\nwith Fixed\nEdges"] --&gt; weak-realizeab &amp; hierarchical;
+    part-rot["Partial\nRotation\nPlanarity"] --&gt; partially-emb &amp; part-rot-flip;
+    ec-free["ec-\nPlanarity\nwith free\nedges"] --&gt; synchronized &amp; part-pq-cons;
+    outer["Outer\nPlanarity"] --&gt; standard;
+    partial["Partial\nPlanarity"] --&gt; streamed-backbone;
+    part-3-page["Partitioned\n3-Page\nBook\nEmbedding"] --&gt; part-tcoh-3-page;
+    streamed-backbone["Streamed\nBackbone\nPlanarity"] --&gt; sefe;
+    abg["⟨α, β,\nγ⟩-drawings"];
+    part-pq-cons["Partially\nPQ-\nconstrained\nPlanarity"] --&gt; ec-free;
+    book["Book?"];
+    t-level["𝒯-level\nPlanarity"];
+    clustered["Clustered\nPlanarity"] --&gt; synchronized &amp; abg;
+    part-tcoh-2-page["Partitioned\n𝒯-coherent\n2-page\nBook\nEmbedding"] --&gt; c-sefe-2 &amp; part-3-page;
+    standard["(Standard)\nPlanarity"] --&gt; level &amp; part-2-page &amp; ec &amp; part-rot &amp; partial;
+    weak-realizeab["Weak\nRealizability"] --&gt; sefe;
+    proper-cl["Proper\nClustered\nLevel\nPlanarity"] --&gt; clustered-level &amp; proper-tl;
+    c-sefe-2["Connected\nSEFE-2"] --&gt; clustered &amp; part-tcoh-2-page;
+    clustered-level["Clustered\nLevel\nPlanarity"] --&gt; sefe-3;
+    rci-nodetrix["Row-\nColumn-\nIndependent\nNodeTrix\nPlanarity"] --&gt; synchronized &amp; nodetrix;
+    sefe-3["SEFE-3"] --&gt; sefe;
+    proper-tl["Proper\n𝒯-level\nPlanarity"] --&gt; t-level &amp; part-tcoh-2-page;
+    part-2-page["Partitioned\n2-page\nBook\nEmbedding"] --&gt; part-tcoh-2-page;
+    sefe-2["SEFE-2"] --&gt; max-sefe &amp; sefe-3;
+    streamed["Streamed\nPlanarity"] --&gt; streamed-backbone;
+    part-tcoh-3-page["Partitioned\n𝒯-coherent\n3-page\nBook\nEmbedding"] --&gt; sefe-3 &amp; streamed-backbone;
+    strip["Strip\nPlanarity"] --&gt; clustered;
+    synchronized["Synchronized\nPlanarity"] --&gt; sefe-2;
+    ec["ec-\nPlanarity"] --&gt; partially-emb &amp; ec-free;
+    nodetrix["NodeTrix\nPlanarity"];
+    strip-emb["(Embedded)\nStrip\nPlanarity"] --&gt; upw-emb &amp; strip;
+    part-rot-flip["Partial\nRotation\nPlanarity\nwith flips"] --&gt; ec-free;
+    level["Level\nPlanarity"] --&gt; proper-cl &amp; strip &amp; radial-level;
+    upw-emb["(Embedded)\nUpward\nPlanarity"] --&gt; upward;
+    upward["Upward\nPlanarity"] --&gt; sefe;
+    radial-level["Radial\nLevel\nPlanarity"] --&gt; clustered;
+    partially-emb["Partially\nEmbedded\nPlanarity"] --&gt; clustered;
+    max-sefe["MaxSEFE"];
+    hierarchical["Hierarchical\nPlanarity"];
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stderr">
+<pre><code>[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { _GLOBAL__sub_I_cling_module_144, $.cling-module-144.__inits.0, __cxx_global_var_initcling_module_144_, _ZN4ogdfL17s_ogdfInitializerE, __orc_init_func.cling-module-144 }) }
+[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-144 }) }</code></pre>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="hierarchy.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Hierarchy</figcaption>
+</figure>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/N-Coder/constrained-planarity/blob/main/index.qmd" class="toc-action">View source</a></p></div></div></div></div></footer></body></html>
