@@ -4,7 +4,7 @@ project:
 website:
   title: "Constrained Planarity"
   description: "A comprehensive collection of constrained planarity variants."
-  repo-url: "https://github.com/N-Coder/constrained-planarity"
+  repo-url: "https://github.com/constrained-planarity/constrained-planarity.github.io"
   repo-actions: ["source"]
   navbar:
     left:

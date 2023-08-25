@@ -7,4 +7,4 @@ listing:
   filter-ui: [title]
 ---
 
-A list of constrained planarity problems
+The following constrained planarity problems are listed in this website:

@@ -5,6 +5,10 @@ execute:
     freeze: false
 ---
 
+In the constrained planarity setting, we ask whether a graph can be drawn such that no edges cross
+and that some given further constraints are satisfied. Click on one of the problem variants below
+to explore what these constraints may look like, or read more about this website on the [About](about.qmd) page.
+
 <style>
 svg a {
     text-decoration: none;
@@ -15,11 +19,8 @@ svg g.cluster text {
 </style>
 
 ```{python}
-from scripts.hierarchy import dot, mermaid, ogdf
-```
-
-```{python}
 #| output: asis
+from scripts.hierarchy import dot
 print("`"*3 + "{dot}")
 print("//| fig-width: NaN")
 print("//| fig-height: NaN")
@@ -28,19 +29,7 @@ print("`"*3)
 ```
 
 ```{python}
-dot()
+# dot()
 ```
 
-```{python}
-#| output: asis
-print("`"*3 + "{mermaid}")
-print('%%{init: {"flowchart": {"htmlLabels": false}} }%%')
-mermaid()
-print("`"*3)
-```
-
-```{python}
-ogdf()
-```
-
-![Hierarchy](hierarchy.svg)
+This hierarchy was initially suggested by Schaefer @Schaefer2013Theory and later extended by Da Lozzo @DaLozzo2015Planar.
