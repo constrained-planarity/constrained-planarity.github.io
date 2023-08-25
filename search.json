@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "problems.html",
-    "href": "problems.html",
-    "title": "Problems",
-    "section": "",
-    "text": "A list of constrained planarity problems\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\\(\\langle \\alpha, \\beta, \\gamma \\rangle\\)-drawings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\mathcal T\\)-level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Embedded) Strip Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Embedded) Upward Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Standard) Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBook?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClustered Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClustered Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConnected SEFE-2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHierarchical Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLevel Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaxSEFE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNodeTrix Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOuter Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Rotation Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Rotation Planarity with flips\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartially Embedded Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartially PQ-constrained Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned \\(\\mathcal T\\)-coherent 2-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned \\(\\mathcal T\\)-coherent 3-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned 2-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned 3-Page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProper \\(\\mathcal T\\)-level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProper Clustered Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRadial Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow-Column-Independent NodeTrix Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSEFE-2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSEFE-3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimultaneous Embedding with Fixed Edges\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStreamed Backbone Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStreamed Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStrip Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronized Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUpward Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeak Realizability\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nec-Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nec-Planarity with free edges\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Constrained Planarity",
-    "section": "",
-    "text": "G\n\n \n\ncluster_P\n\n P  \n\ncluster_ecfree\n\n \n\ncluster_csefe2\n\n \n\ncluster_X\n\n ?  \n\ncluster_NPC\n\n NPC  \n\ncluster_sefe\n\n  \n\npartrot\n\n  Partial Rotation Planarity     \n\npartrotflip\n\n  Partial Rotation Planarity with flips     \n\npartrot-&gt;partrotflip\n\n    \n\npartiallyemb\n\n  Partially Embedded Planarity     \n\npartrot-&gt;partiallyemb\n\n    \n\necfree\n\n  ec- Planarity with free edges     \n\npartpqcons\n\n  Partially PQ- constrained Planarity     \n\necfree-&gt;partpqcons\n\n     \n\nsynchronized\n\n  Synchronized Planarity     \n\necfree-&gt;synchronized\n\n    \n\nouter\n\n  Outer Planarity     \n\nstandard\n\n  (Standard) Planarity     \n\nouter-&gt;standard\n\n    \n\npartial\n\n  Partial Planarity     \n\nstreamedbackbone\n\n  Streamed Backbone Planarity     \n\npartial-&gt;streamedbackbone\n\n    \n\nclustered\n\n  Clustered Planarity     \n\nclustered-&gt;synchronized\n\n    \n\nabg\n\n  ⟨α, β, γ⟩-drawings     \n\nclustered-&gt;abg\n\n    \n\nstandard-&gt;partrot\n\n    \n\nstandard-&gt;partial\n\n    \n\npart2page\n\n  Partitioned 2-page Book Embedding     \n\nstandard-&gt;part2page\n\n    \n\nec\n\n  ec- Planarity     \n\nstandard-&gt;ec\n\n     \n\nlevel\n\n  Level Planarity     \n\nstandard-&gt;level\n\n    \n\npropercl\n\n  Proper Clustered Level Planarity     \n\npropertl\n\n  Proper 𝒯-level Planarity     \n\npropercl-&gt;propertl\n\n    \n\nclusteredlevel\n\n  Clustered Level Planarity     \n\npropercl-&gt;clusteredlevel\n\n    \n\ncsefe2\n\n  Connected SEFE-2     \n\ncsefe2-&gt;clustered\n\n    \n\nparttcoh2page\n\n  Partitioned 𝒯-coherent 2-page Book Embedding     \n\ncsefe2-&gt;parttcoh2page\n\n     \n\npart3page\n\n  Partitioned 3-Page Book Embedding     \n\nparttcoh2page-&gt;part3page\n\n    \n\nrcinodetrix\n\n  Row- Column- Independent NodeTrix Planarity     \n\nrcinodetrix-&gt;synchronized\n\n    \n\nnodetrix\n\n  NodeTrix Planarity     \n\nrcinodetrix-&gt;nodetrix\n\n    \n\npropertl-&gt;parttcoh2page\n\n    \n\ntlevel\n\n  𝒯-level Planarity     \n\npropertl-&gt;tlevel\n\n    \n\npart2page-&gt;parttcoh2page\n\n    \n\nstrip\n\n  Strip Planarity     \n\nstrip-&gt;clustered\n\n   \n\nsefe2\n\n  SEFE-2     \n\nsynchronized-&gt;sefe2\n\n    \n\nec-&gt;ecfree\n\n    \n\nec-&gt;partiallyemb\n\n    \n\nstripemb\n\n  (Embedded) Strip Planarity     \n\nstripemb-&gt;strip\n\n    \n\nupwemb\n\n  (Embedded) Upward Planarity     \n\nstripemb-&gt;upwemb\n\n    \n\npartrotflip-&gt;ecfree\n\n    \n\nlevel-&gt;propercl\n\n    \n\nlevel-&gt;strip\n\n    \n\nradiallevel\n\n  Radial Level Planarity     \n\nlevel-&gt;radiallevel\n\n    \n\nupward\n\n  Upward Planarity     \n\nupwemb-&gt;upward\n\n    \n\nradiallevel-&gt;clustered\n\n     \n\npartiallyemb-&gt;clustered\n\n    \n\nsefe3\n\n  SEFE-3     \n\nsefe2-&gt;sefe3\n\n    \n\nmaxsefe\n\n  MaxSEFE     \n\nsefe2-&gt;maxsefe\n\n    \n\nsefe\n\n  Simultaneous Embedding with Fixed Edges     \n\nweakrealizeab\n\n  Weak Realizability     \n\nsefe-&gt;weakrealizeab\n\n     \n\nhierarchical\n\n  Hierarchical Planarity     \n\nsefe-&gt;hierarchical\n\n    \n\nparttcoh3page\n\n  Partitioned 𝒯-coherent 3-page Book Embedding     \n\npart3page-&gt;parttcoh3page\n\n    \n\nstreamedbackbone-&gt;sefe\n\n    \n\nbook\n\n  Book?     \n\nclusteredlevel-&gt;sefe3\n\n    \n\nsefe3-&gt;sefe\n\n    \n\nstreamed\n\n  Streamed Planarity     \n\nstreamed-&gt;streamedbackbone\n\n    \n\nparttcoh3page-&gt;streamedbackbone\n\n    \n\nparttcoh3page-&gt;sefe3\n\n    \n\nupward-&gt;sefe\n\n   \n\n\n\n\n\n\n\ndigraph G {\n    concentrate=true;\n    fontname=\"'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif\";\n    fontsize=18;\n    lheight=0;\n    node [fontname=\"'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif\", fillcolor=\"white\", style=\"filled\"];\n    subgraph cluster_P {\n        label=\"P\";\n        labeljust=r;\n        partrot [label=\"Partial\\nRotation\\nPlanarity\", href=\"/problems/part-rot.html\"];\n        subgraph cluster_ecfree {\n            label=\"\";\n            style=\"invis\";\n            { rank=same ecfree partpqcons }\n            ecfree [label=\"ec-\\nPlanarity\\nwith free\\nedges\", href=\"/problems/ec-free.html\"];\n            partpqcons [label=\"Partially\\nPQ-\\nconstrained\\nPlanarity\", href=\"/problems/part-pq-cons.html\"];\n        }\n        outer [label=\"Outer\\nPlanarity\", href=\"/problems/outer.html\"];\n        partial [label=\"Partial\\nPlanarity\", href=\"/problems/partial.html\"];\n        clustered [label=\"Clustered\\nPlanarity\", href=\"/problems/clustered.html\"];\n        standard [label=\"(Standard)\\nPlanarity\", href=\"/problems/standard.html\"];\n        propercl [label=\"Proper\\nClustered\\nLevel\\nPlanarity\", href=\"/problems/proper-cl.html\"];\n        subgraph cluster_csefe2 {\n            label=\"\";\n            style=\"invis\";\n            { rank=same csefe2 parttcoh2page }\n            csefe2 [label=\"Connected\\nSEFE-2\", href=\"/problems/c-sefe-2.html\"];\n            parttcoh2page [label=\"Partitioned\\n𝒯-coherent\\n2-page\\nBook\\nEmbedding\", href=\"/problems/part-tcoh-2-page.html\"];\n        }\n        rcinodetrix [label=\"Row-\\nColumn-\\nIndependent\\nNodeTrix\\nPlanarity\", href=\"/problems/rci-nodetrix.html\"];\n        propertl [label=\"Proper\\n𝒯-level\\nPlanarity\", href=\"/problems/proper-tl.html\"];\n        part2page [label=\"Partitioned\\n2-page\\nBook\\nEmbedding\", href=\"/problems/part-2-page.html\"];\n        strip [label=\"Strip\\nPlanarity\", href=\"/problems/strip.html\"];\n        synchronized [label=\"Synchronized\\nPlanarity\", href=\"/problems/synchronized.html\"];\n        ec [label=\"ec-\\nPlanarity\", href=\"/problems/ec.html\"];\n        stripemb [label=\"(Embedded)\\nStrip\\nPlanarity\", href=\"/problems/strip-emb.html\"];\n        partrotflip [label=\"Partial\\nRotation\\nPlanarity\\nwith flips\", href=\"/problems/part-rot-flip.html\"];\n        level [label=\"Level\\nPlanarity\", href=\"/problems/level.html\"];\n        upwemb [label=\"(Embedded)\\nUpward\\nPlanarity\", href=\"/problems/upw-emb.html\"];\n        radiallevel [label=\"Radial\\nLevel\\nPlanarity\", href=\"/problems/radial-level.html\"];\n        partiallyemb [label=\"Partially\\nEmbedded\\nPlanarity\", href=\"/problems/partially-emb.html\"];\n    }\n    subgraph cluster_X {\n        label=\"?\";\n        labeljust=r;\n        sefe2 [label=\"SEFE-2\", href=\"/problems/sefe-2.html\"];\n    }\n    subgraph cluster_NPC {\n        label=\"NPC\";\n        labeljust=r;\n        subgraph cluster_sefe {\n            label=\"\";\n            style=\"invis\";\n            { rank=same sefe weakrealizeab }\n            sefe [label=\"Simultaneous\\nEmbedding\\nwith Fixed\\nEdges\", href=\"/problems/sefe.html\"];\n            weakrealizeab [label=\"Weak\\nRealizability\", href=\"/problems/weak-realizeab.html\"];\n        }\n        part3page [label=\"Partitioned\\n3-Page\\nBook\\nEmbedding\", href=\"/problems/part-3-page.html\"];\n        streamedbackbone [label=\"Streamed\\nBackbone\\nPlanarity\", href=\"/problems/streamed-backbone.html\"];\n        abg [label=\"⟨α, β,\\nγ⟩-drawings\", href=\"/problems/abg.html\"];\n        book [label=\"Book?\", href=\"/problems/book.html\"];\n        tlevel [label=\"𝒯-level\\nPlanarity\", href=\"/problems/t-level.html\"];\n        clusteredlevel [label=\"Clustered\\nLevel\\nPlanarity\", href=\"/problems/clustered-level.html\"];\n        sefe3 [label=\"SEFE-3\", href=\"/problems/sefe-3.html\"];\n        streamed [label=\"Streamed\\nPlanarity\", href=\"/problems/streamed.html\"];\n        parttcoh3page [label=\"Partitioned\\n𝒯-coherent\\n3-page\\nBook\\nEmbedding\", href=\"/problems/part-tcoh-3-page.html\"];\n        nodetrix [label=\"NodeTrix\\nPlanarity\", href=\"/problems/nodetrix.html\"];\n        upward [label=\"Upward\\nPlanarity\", href=\"/problems/upward.html\"];\n        maxsefe [label=\"MaxSEFE\", href=\"/problems/max-sefe.html\"];\n        hierarchical [label=\"Hierarchical\\nPlanarity\", href=\"/problems/hierarchical.html\"];\n    }\n\n    sefe -&gt; { hierarchical };\n    sefe -&gt; { weakrealizeab } [dir=none, constraint=false, color=\"black:invis:black\"];\n    partrot -&gt; { partiallyemb , partrotflip };\n    ecfree -&gt; { synchronized };\n    ecfree -&gt; { partpqcons } [dir=none, constraint=false, color=\"black:invis:black\"];\n    outer -&gt; { standard };\n    partial -&gt; { streamedbackbone };\n    part3page -&gt; { parttcoh3page };\n    streamedbackbone -&gt; { sefe };\n    clustered -&gt; { synchronized , abg };\n    parttcoh2page -&gt; { part3page };\n    standard -&gt; { level , part2page , ec , partrot , partial };\n    propercl -&gt; { clusteredlevel , propertl };\n    csefe2 -&gt; { clustered };\n    csefe2 -&gt; { parttcoh2page } [dir=none, constraint=false, color=\"black:invis:black\"];\n    clusteredlevel -&gt; { sefe3 };\n    rcinodetrix -&gt; { synchronized , nodetrix };\n    sefe3 -&gt; { sefe };\n    propertl -&gt; { tlevel , parttcoh2page };\n    part2page -&gt; { parttcoh2page };\n    sefe2 -&gt; { maxsefe , sefe3 };\n    streamed -&gt; { streamedbackbone };\n    parttcoh3page -&gt; { sefe3 , streamedbackbone };\n    strip -&gt; { clustered };\n    synchronized -&gt; { sefe2 };\n    ec -&gt; { partiallyemb , ecfree };\n    stripemb -&gt; { upwemb , strip };\n    partrotflip -&gt; { ecfree };\n    level -&gt; { propercl , strip , radiallevel };\n    upwemb -&gt; { upward };\n    upward -&gt; { sefe };\n    radiallevel -&gt; { clustered };\n    partiallyemb -&gt; { clustered };\n}\n\n\n\n\n\n\n%%{init: {\"flowchart\": {\"htmlLabels\": false}} }%%\nflowchart TB\n    sefe[\"Simultaneous\\nEmbedding\\nwith Fixed\\nEdges\"] --&gt; weak-realizeab & hierarchical;\n    part-rot[\"Partial\\nRotation\\nPlanarity\"] --&gt; partially-emb & part-rot-flip;\n    ec-free[\"ec-\\nPlanarity\\nwith free\\nedges\"] --&gt; synchronized & part-pq-cons;\n    outer[\"Outer\\nPlanarity\"] --&gt; standard;\n    partial[\"Partial\\nPlanarity\"] --&gt; streamed-backbone;\n    part-3-page[\"Partitioned\\n3-Page\\nBook\\nEmbedding\"] --&gt; part-tcoh-3-page;\n    streamed-backbone[\"Streamed\\nBackbone\\nPlanarity\"] --&gt; sefe;\n    abg[\"⟨α, β,\\nγ⟩-drawings\"];\n    part-pq-cons[\"Partially\\nPQ-\\nconstrained\\nPlanarity\"] --&gt; ec-free;\n    book[\"Book?\"];\n    t-level[\"𝒯-level\\nPlanarity\"];\n    clustered[\"Clustered\\nPlanarity\"] --&gt; synchronized & abg;\n    part-tcoh-2-page[\"Partitioned\\n𝒯-coherent\\n2-page\\nBook\\nEmbedding\"] --&gt; c-sefe-2 & part-3-page;\n    standard[\"(Standard)\\nPlanarity\"] --&gt; level & part-2-page & ec & part-rot & partial;\n    weak-realizeab[\"Weak\\nRealizability\"] --&gt; sefe;\n    proper-cl[\"Proper\\nClustered\\nLevel\\nPlanarity\"] --&gt; clustered-level & proper-tl;\n    c-sefe-2[\"Connected\\nSEFE-2\"] --&gt; clustered & part-tcoh-2-page;\n    clustered-level[\"Clustered\\nLevel\\nPlanarity\"] --&gt; sefe-3;\n    rci-nodetrix[\"Row-\\nColumn-\\nIndependent\\nNodeTrix\\nPlanarity\"] --&gt; synchronized & nodetrix;\n    sefe-3[\"SEFE-3\"] --&gt; sefe;\n    proper-tl[\"Proper\\n𝒯-level\\nPlanarity\"] --&gt; t-level & part-tcoh-2-page;\n    part-2-page[\"Partitioned\\n2-page\\nBook\\nEmbedding\"] --&gt; part-tcoh-2-page;\n    sefe-2[\"SEFE-2\"] --&gt; max-sefe & sefe-3;\n    streamed[\"Streamed\\nPlanarity\"] --&gt; streamed-backbone;\n    part-tcoh-3-page[\"Partitioned\\n𝒯-coherent\\n3-page\\nBook\\nEmbedding\"] --&gt; sefe-3 & streamed-backbone;\n    strip[\"Strip\\nPlanarity\"] --&gt; clustered;\n    synchronized[\"Synchronized\\nPlanarity\"] --&gt; sefe-2;\n    ec[\"ec-\\nPlanarity\"] --&gt; partially-emb & ec-free;\n    nodetrix[\"NodeTrix\\nPlanarity\"];\n    strip-emb[\"(Embedded)\\nStrip\\nPlanarity\"] --&gt; upw-emb & strip;\n    part-rot-flip[\"Partial\\nRotation\\nPlanarity\\nwith flips\"] --&gt; ec-free;\n    level[\"Level\\nPlanarity\"] --&gt; proper-cl & strip & radial-level;\n    upw-emb[\"(Embedded)\\nUpward\\nPlanarity\"] --&gt; upward;\n    upward[\"Upward\\nPlanarity\"] --&gt; sefe;\n    radial-level[\"Radial\\nLevel\\nPlanarity\"] --&gt; clustered;\n    partially-emb[\"Partially\\nEmbedded\\nPlanarity\"] --&gt; clustered;\n    max-sefe[\"MaxSEFE\"];\n    hierarchical[\"Hierarchical\\nPlanarity\"];\n\n\n\n\n\n\n\n[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { _GLOBAL__sub_I_cling_module_144, $.cling-module-144.__inits.0, __cxx_global_var_initcling_module_144_, _ZN4ogdfL17s_ogdfInitializerE, __orc_init_func.cling-module-144 }) }\n[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-144 }) }\n\n\n\n\n\nHierarchy"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -21,72 +7,30 @@
     "text": "About this site"
   },
   {
-    "objectID": "archive/clustered.html",
-    "href": "archive/clustered.html",
-    "title": "Clustered Planarity",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Constrained Planarity",
     "section": "",
-    "text": "Given a graph \\(G=(V,E)\\) equipped with a cluster hierarchy \\(T\\), which is a rooted tree with the vertices \\(V\\) as leaves. Each inner node \\(\\mu\\) of \\(T\\) represents a cluster encompassing all leaves \\(V_\\mu\\) of the subtree rooted at \\(\\mu\\). A cluster planar drawing is a planar drawing that also maps every cluster \\(\\mu\\) to a simple closed region \\(R_\\mu\\) such that 1. \\(R_\\mu\\) encloses exactly the vertices \\(V_\\mu\\), 2. no two cluster region boundaries intersect, and 3. no edge intersects the boundary of a cluster more than once. A cluster graph is cluster planar if it admits a cluster planar drawing.\n\n\n\nLengauer (Lengauer1989?) first discussed Clustered Planarity under a different name in 1989, which is why it was later independently rediscovered by Feng et al. (Feng1995?) in 1995. Both gave polynomial-time algorithms for the case where the subgraph induced by any cluster is connected. While efficient algorithms were found for many other special cases (Angelini2019?) (Cortese2008?) (Fulek2015?) (Gutwenger2002?), it took almost 30 years until Fulek and Tóth (Fulek2019?) found an \\(O((n+d)^8)\\) solution to the general problem in 2019. Subsequently, Bläsius et al. (Blaesius2021?) gave a solution with a running time of \\(O((n+d)^2)\\), which also reveals the main concepts for solving Clustered Planarity.\n\n\n\nWikipedia\n(Schaefer2013?)\n(GDHandbookChapter1?)\n\n\n\n\n\nLet \\(d\\) be the number of edge-cluster boundary crossings and $be the maximum number of edges crossing a single cluster border. Clustered Planarity can be solved in time…\n\n\\(O(n+d\\cdot \\Delta)\\subset O(n^4)\\) via Synchronized Planarity with SPQR-node expansion\n\\(O((n+d)^2)\\subset O(n^4)\\) via Synchronized Planarity\n\\(O((n+d)^8)\\subset O(n^{16})\\) via Atomic Embeddability\n\n\n\n\npolynomial if the subgraph induced by any cluster is connected (Lengauer1989?; Feng1995?)\n(Angelini2019?)\n(Cortese2008?)\n(Fulek2015?)\n(Gutwenger2002?)\n\n\n\n\n\n\nReduces to Synchronized Planarity and Atomic Embeddability using the cd-Tree representation\nReduces to SEFE-2"
+    "text": "G\n\n \n\ncluster_P\n\n P  \n\ncluster_csefe2\n\n \n\ncluster_ecfree\n\n \n\ncluster_X\n\n ?  \n\ncluster_NPC\n\n NPC  \n\ncluster_sefe\n\n  \n\nradiallevel\n\n  Radial Level Planarity     \n\nclustered\n\n  Clustered Planarity     \n\nradiallevel-&gt;clustered\n\n    \n\nstripemb\n\n  (Embedded) Strip Planarity     \n\nstrip\n\n  Strip Planarity     \n\nstripemb-&gt;strip\n\n    \n\nupwemb\n\n  (Embedded) Upward Planarity     \n\nstripemb-&gt;upwemb\n\n    \n\nsynchronized\n\n  Synchronized Planarity     \n\nclustered-&gt;synchronized\n\n    \n\nabg\n\n  ⟨α, β, γ⟩-drawings     \n\nclustered-&gt;abg\n\n    \n\npropertl\n\n  Proper 𝒯-level Planarity     \n\nparttcoh2page\n\n  Partitioned 𝒯-coherent 2-page Book Embedding     \n\npropertl-&gt;parttcoh2page\n\n    \n\ntlevel\n\n  𝒯-level Planarity     \n\npropertl-&gt;tlevel\n\n    \n\npartrot\n\n  Partial Rotation Planarity     \n\npartiallyemb\n\n  Partially Embedded Planarity     \n\npartrot-&gt;partiallyemb\n\n    \n\npartrotflip\n\n  Partial Rotation Planarity with flips     \n\npartrot-&gt;partrotflip\n\n    \n\npart2page\n\n  Partitioned 2-page Book Embedding     \n\npart2page-&gt;parttcoh2page\n\n    \n\nrcinodetrix\n\n  Row- Column- Independent NodeTrix Planarity     \n\nrcinodetrix-&gt;synchronized\n\n    \n\nnodetrix\n\n  NodeTrix Planarity     \n\nrcinodetrix-&gt;nodetrix\n\n    \n\ncsefe2\n\n  Connected SEFE-2     \n\ncsefe2-&gt;clustered\n\n    \n\ncsefe2-&gt;parttcoh2page\n\n     \n\npart3page\n\n  Partitioned 3-Page Book Embedding     \n\nparttcoh2page-&gt;part3page\n\n    \n\npartial\n\n  Partial Planarity     \n\nstreamedbackbone\n\n  Streamed Backbone Planarity     \n\npartial-&gt;streamedbackbone\n\n    \n\nec\n\n  ec- Planarity     \n\nec-&gt;partiallyemb\n\n    \n\necfree\n\n  ec- Planarity with free edges     \n\nec-&gt;ecfree\n\n    \n\nstrip-&gt;clustered\n\n    \n\nsefe2\n\n  SEFE-2     \n\nsynchronized-&gt;sefe2\n\n    \n\nlevel\n\n  Level Planarity     \n\nlevel-&gt;radiallevel\n\n    \n\nlevel-&gt;strip\n\n    \n\npropercl\n\n  Proper Clustered Level Planarity     \n\nlevel-&gt;propercl\n\n    \n\npartiallyemb-&gt;clustered\n\n    \n\nupward\n\n  Upward Planarity     \n\nupwemb-&gt;upward\n\n    \n\nstandard\n\n  (Standard) Planarity     \n\nstandard-&gt;partrot\n\n     \n\nstandard-&gt;part2page\n\n    \n\nstandard-&gt;partial\n\n    \n\nstandard-&gt;ec\n\n    \n\nstandard-&gt;level\n\n    \n\nouter\n\n  Outer Planarity     \n\nouter-&gt;standard\n\n    \n\necfree-&gt;synchronized\n\n    \n\npartpqcons\n\n  Partially PQ- constrained Planarity     \n\necfree-&gt;partpqcons\n\n     \n\npartrotflip-&gt;ecfree\n\n    \n\npropercl-&gt;propertl\n\n    \n\nclusteredlevel\n\n  Clustered Level Planarity     \n\npropercl-&gt;clusteredlevel\n\n    \n\nmaxsefe\n\n  MaxSEFE     \n\nsefe2-&gt;maxsefe\n\n    \n\nsefe3\n\n  SEFE-3     \n\nsefe2-&gt;sefe3\n\n    \n\nparttcoh3page\n\n  Partitioned 𝒯-coherent 3-page Book Embedding     \n\nparttcoh3page-&gt;streamedbackbone\n\n    \n\nparttcoh3page-&gt;sefe3\n\n    \n\nbook\n\n  Book?     \n\nsefe\n\n  Simultaneous Embedding with Fixed Edges     \n\nstreamedbackbone-&gt;sefe\n\n    \n\nclusteredlevel-&gt;sefe3\n\n    \n\nsefe3-&gt;sefe\n\n    \n\nhierarchical\n\n  Hierarchical Planarity     \n\nupward-&gt;sefe\n\n    \n\npart3page-&gt;parttcoh3page\n\n    \n\nstreamed\n\n  Streamed Planarity     \n\nstreamed-&gt;streamedbackbone\n\n    \n\nsefe-&gt;hierarchical\n\n    \n\nweakrealizeab\n\n  Weak Realizability     \n\nsefe-&gt;weakrealizeab\n\n    \n\n\n\n\n\n\n\ndigraph G {\n    concentrate=true;\n    fontname=\"'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif\";\n    fontsize=18;\n    lheight=0;\n    node [fontname=\"'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif\", fillcolor=\"white\", style=\"filled\"];\n    subgraph cluster_P {\n        label=\"P\";\n        labeljust=r;\n        radiallevel [label=\"Radial\\nLevel\\nPlanarity\", href=\"/problems/radial-level.html\"];\n        stripemb [label=\"(Embedded)\\nStrip\\nPlanarity\", href=\"/problems/strip-emb.html\"];\n        clustered [label=\"Clustered\\nPlanarity\", href=\"/problems/clustered.html\"];\n        propertl [label=\"Proper\\n𝒯-level\\nPlanarity\", href=\"/problems/proper-tl.html\"];\n        partrot [label=\"Partial\\nRotation\\nPlanarity\", href=\"/problems/part-rot.html\"];\n        part2page [label=\"Partitioned\\n2-page\\nBook\\nEmbedding\", href=\"/problems/part-2-page.html\"];\n        rcinodetrix [label=\"Row-\\nColumn-\\nIndependent\\nNodeTrix\\nPlanarity\", href=\"/problems/rci-nodetrix.html\"];\n        subgraph cluster_csefe2 {\n            label=\"\";\n            style=\"invis\";\n            { rank=same csefe2 parttcoh2page }\n            csefe2 [label=\"Connected\\nSEFE-2\", href=\"/problems/c-sefe-2.html\"];\n            parttcoh2page [label=\"Partitioned\\n𝒯-coherent\\n2-page\\nBook\\nEmbedding\", href=\"/problems/part-tcoh-2-page.html\"];\n        }\n        partial [label=\"Partial\\nPlanarity\", href=\"/problems/partial.html\"];\n        ec [label=\"ec-\\nPlanarity\", href=\"/problems/ec.html\"];\n        strip [label=\"Strip\\nPlanarity\", href=\"/problems/strip.html\"];\n        synchronized [label=\"Synchronized\\nPlanarity\", href=\"/problems/synchronized.html\"];\n        level [label=\"Level\\nPlanarity\", href=\"/problems/level.html\"];\n        partiallyemb [label=\"Partially\\nEmbedded\\nPlanarity\", href=\"/problems/partially-emb.html\"];\n        upwemb [label=\"(Embedded)\\nUpward\\nPlanarity\", href=\"/problems/upw-emb.html\"];\n        standard [label=\"(Standard)\\nPlanarity\", href=\"/problems/standard.html\"];\n        outer [label=\"Outer\\nPlanarity\", href=\"/problems/outer.html\"];\n        subgraph cluster_ecfree {\n            label=\"\";\n            style=\"invis\";\n            { rank=same ecfree partpqcons }\n            ecfree [label=\"ec-\\nPlanarity\\nwith free\\nedges\", href=\"/problems/ec-free.html\"];\n            partpqcons [label=\"Partially\\nPQ-\\nconstrained\\nPlanarity\", href=\"/problems/part-pq-cons.html\"];\n        }\n        partrotflip [label=\"Partial\\nRotation\\nPlanarity\\nwith flips\", href=\"/problems/part-rot-flip.html\"];\n        propercl [label=\"Proper\\nClustered\\nLevel\\nPlanarity\", href=\"/problems/proper-cl.html\"];\n    }\n    subgraph cluster_X {\n        label=\"?\";\n        labeljust=r;\n        sefe2 [label=\"SEFE-2\", href=\"/problems/sefe-2.html\"];\n    }\n    subgraph cluster_NPC {\n        label=\"NPC\";\n        labeljust=r;\n        abg [label=\"⟨α, β,\\nγ⟩-drawings\", href=\"/problems/abg.html\"];\n        parttcoh3page [label=\"Partitioned\\n𝒯-coherent\\n3-page\\nBook\\nEmbedding\", href=\"/problems/part-tcoh-3-page.html\"];\n        book [label=\"Book?\", href=\"/problems/book.html\"];\n        streamedbackbone [label=\"Streamed\\nBackbone\\nPlanarity\", href=\"/problems/streamed-backbone.html\"];\n        maxsefe [label=\"MaxSEFE\", href=\"/problems/max-sefe.html\"];\n        nodetrix [label=\"NodeTrix\\nPlanarity\", href=\"/problems/nodetrix.html\"];\n        clusteredlevel [label=\"Clustered\\nLevel\\nPlanarity\", href=\"/problems/clustered-level.html\"];\n        sefe3 [label=\"SEFE-3\", href=\"/problems/sefe-3.html\"];\n        hierarchical [label=\"Hierarchical\\nPlanarity\", href=\"/problems/hierarchical.html\"];\n        upward [label=\"Upward\\nPlanarity\", href=\"/problems/upward.html\"];\n        part3page [label=\"Partitioned\\n3-Page\\nBook\\nEmbedding\", href=\"/problems/part-3-page.html\"];\n        streamed [label=\"Streamed\\nPlanarity\", href=\"/problems/streamed.html\"];\n        subgraph cluster_sefe {\n            label=\"\";\n            style=\"invis\";\n            { rank=same sefe weakrealizeab }\n            sefe [label=\"Simultaneous\\nEmbedding\\nwith Fixed\\nEdges\", href=\"/problems/sefe.html\"];\n            weakrealizeab [label=\"Weak\\nRealizability\", href=\"/problems/weak-realizeab.html\"];\n        }\n        tlevel [label=\"𝒯-level\\nPlanarity\", href=\"/problems/t-level.html\"];\n    }\n\n    radiallevel -&gt; { clustered };\n    stripemb -&gt; { upwemb , strip };\n    parttcoh3page -&gt; { sefe3 , streamedbackbone };\n    clustered -&gt; { synchronized , abg };\n    propertl -&gt; { tlevel , parttcoh2page };\n    partrot -&gt; { partiallyemb , partrotflip };\n    part2page -&gt; { parttcoh2page };\n    rcinodetrix -&gt; { synchronized , nodetrix };\n    streamedbackbone -&gt; { sefe };\n    csefe2 -&gt; { clustered };\n    csefe2 -&gt; { parttcoh2page } [dir=none, constraint=false, color=\"black:invis:black\"];\n    partial -&gt; { streamedbackbone };\n    ec -&gt; { partiallyemb , ecfree };\n    strip -&gt; { clustered };\n    sefe2 -&gt; { maxsefe , sefe3 };\n    parttcoh2page -&gt; { part3page };\n    clusteredlevel -&gt; { sefe3 };\n    synchronized -&gt; { sefe2 };\n    level -&gt; { propercl , strip , radiallevel };\n    partiallyemb -&gt; { clustered };\n    sefe3 -&gt; { sefe };\n    upwemb -&gt; { upward };\n    standard -&gt; { level , part2page , ec , partrot , partial };\n    outer -&gt; { standard };\n    upward -&gt; { sefe };\n    part3page -&gt; { parttcoh3page };\n    ecfree -&gt; { synchronized };\n    ecfree -&gt; { partpqcons } [dir=none, constraint=false, color=\"black:invis:black\"];\n    partrotflip -&gt; { ecfree };\n    streamed -&gt; { streamedbackbone };\n    sefe -&gt; { hierarchical };\n    sefe -&gt; { weakrealizeab } [dir=none, constraint=false, color=\"black:invis:black\"];\n    propercl -&gt; { clusteredlevel , propertl };\n}\n\n\n\n\n\n\n%%{init: {\"flowchart\": {\"htmlLabels\": false}} }%%\nflowchart TB\n    abg[\"⟨α, β,\\nγ⟩-drawings\"];\n    radial-level[\"Radial\\nLevel\\nPlanarity\"] --&gt; clustered;\n    strip-emb[\"(Embedded)\\nStrip\\nPlanarity\"] --&gt; upw-emb & strip;\n    part-tcoh-3-page[\"Partitioned\\n𝒯-coherent\\n3-page\\nBook\\nEmbedding\"] --&gt; sefe-3 & streamed-backbone;\n    clustered[\"Clustered\\nPlanarity\"] --&gt; synchronized & abg;\n    proper-tl[\"Proper\\n𝒯-level\\nPlanarity\"] --&gt; t-level & part-tcoh-2-page;\n    part-rot[\"Partial\\nRotation\\nPlanarity\"] --&gt; partially-emb & part-rot-flip;\n    book[\"Book?\"];\n    part-2-page[\"Partitioned\\n2-page\\nBook\\nEmbedding\"] --&gt; part-tcoh-2-page;\n    rci-nodetrix[\"Row-\\nColumn-\\nIndependent\\nNodeTrix\\nPlanarity\"] --&gt; synchronized & nodetrix;\n    streamed-backbone[\"Streamed\\nBackbone\\nPlanarity\"] --&gt; sefe;\n    max-sefe[\"MaxSEFE\"];\n    c-sefe-2[\"Connected\\nSEFE-2\"] --&gt; clustered & part-tcoh-2-page;\n    partial[\"Partial\\nPlanarity\"] --&gt; streamed-backbone;\n    part-pq-cons[\"Partially\\nPQ-\\nconstrained\\nPlanarity\"] --&gt; ec-free;\n    ec[\"ec-\\nPlanarity\"] --&gt; partially-emb & ec-free;\n    strip[\"Strip\\nPlanarity\"] --&gt; clustered;\n    sefe-2[\"SEFE-2\"] --&gt; max-sefe & sefe-3;\n    part-tcoh-2-page[\"Partitioned\\n𝒯-coherent\\n2-page\\nBook\\nEmbedding\"] --&gt; c-sefe-2 & part-3-page;\n    nodetrix[\"NodeTrix\\nPlanarity\"];\n    clustered-level[\"Clustered\\nLevel\\nPlanarity\"] --&gt; sefe-3;\n    synchronized[\"Synchronized\\nPlanarity\"] --&gt; sefe-2;\n    level[\"Level\\nPlanarity\"] --&gt; proper-cl & strip & radial-level;\n    partially-emb[\"Partially\\nEmbedded\\nPlanarity\"] --&gt; clustered;\n    sefe-3[\"SEFE-3\"] --&gt; sefe;\n    hierarchical[\"Hierarchical\\nPlanarity\"];\n    upw-emb[\"(Embedded)\\nUpward\\nPlanarity\"] --&gt; upward;\n    standard[\"(Standard)\\nPlanarity\"] --&gt; level & part-2-page & ec & part-rot & partial;\n    outer[\"Outer\\nPlanarity\"] --&gt; standard;\n    upward[\"Upward\\nPlanarity\"] --&gt; sefe;\n    part-3-page[\"Partitioned\\n3-Page\\nBook\\nEmbedding\"] --&gt; part-tcoh-3-page;\n    ec-free[\"ec-\\nPlanarity\\nwith free\\nedges\"] --&gt; synchronized & part-pq-cons;\n    part-rot-flip[\"Partial\\nRotation\\nPlanarity\\nwith flips\"] --&gt; ec-free;\n    weak-realizeab[\"Weak\\nRealizability\"] --&gt; sefe;\n    streamed[\"Streamed\\nPlanarity\"] --&gt; streamed-backbone;\n    sefe[\"Simultaneous\\nEmbedding\\nwith Fixed\\nEdges\"] --&gt; weak-realizeab & hierarchical;\n    proper-cl[\"Proper\\nClustered\\nLevel\\nPlanarity\"] --&gt; clustered-level & proper-tl;\n    t-level[\"𝒯-level\\nPlanarity\"];\n\n\n\n\n\n\n\n[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-142, $.cling-module-142.__inits.0, _ZN4ogdfL17s_ogdfInitializerE, _GLOBAL__sub_I_cling_module_142, __cxx_global_var_initcling_module_142_ }) }\n[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-142 }) }\n\n\n\n\n\nHierarchy"
   },
   {
-    "objectID": "archive/clustered.html#definition",
-    "href": "archive/clustered.html#definition",
-    "title": "Clustered Planarity",
-    "section": "",
-    "text": "Given a graph \\(G=(V,E)\\) equipped with a cluster hierarchy \\(T\\), which is a rooted tree with the vertices \\(V\\) as leaves. Each inner node \\(\\mu\\) of \\(T\\) represents a cluster encompassing all leaves \\(V_\\mu\\) of the subtree rooted at \\(\\mu\\). A cluster planar drawing is a planar drawing that also maps every cluster \\(\\mu\\) to a simple closed region \\(R_\\mu\\) such that 1. \\(R_\\mu\\) encloses exactly the vertices \\(V_\\mu\\), 2. no two cluster region boundaries intersect, and 3. no edge intersects the boundary of a cluster more than once. A cluster graph is cluster planar if it admits a cluster planar drawing."
-  },
-  {
-    "objectID": "archive/clustered.html#background",
-    "href": "archive/clustered.html#background",
-    "title": "Clustered Planarity",
-    "section": "",
-    "text": "Lengauer (Lengauer1989?) first discussed Clustered Planarity under a different name in 1989, which is why it was later independently rediscovered by Feng et al. (Feng1995?) in 1995. Both gave polynomial-time algorithms for the case where the subgraph induced by any cluster is connected. While efficient algorithms were found for many other special cases (Angelini2019?) (Cortese2008?) (Fulek2015?) (Gutwenger2002?), it took almost 30 years until Fulek and Tóth (Fulek2019?) found an \\(O((n+d)^8)\\) solution to the general problem in 2019. Subsequently, Bläsius et al. (Blaesius2021?) gave a solution with a running time of \\(O((n+d)^2)\\), which also reveals the main concepts for solving Clustered Planarity.\n\n\n\nWikipedia\n(Schaefer2013?)\n(GDHandbookChapter1?)"
-  },
-  {
-    "objectID": "archive/clustered.html#complexity",
-    "href": "archive/clustered.html#complexity",
-    "title": "Clustered Planarity",
-    "section": "",
-    "text": "Let \\(d\\) be the number of edge-cluster boundary crossings and $be the maximum number of edges crossing a single cluster border. Clustered Planarity can be solved in time…\n\n\\(O(n+d\\cdot \\Delta)\\subset O(n^4)\\) via Synchronized Planarity with SPQR-node expansion\n\\(O((n+d)^2)\\subset O(n^4)\\) via Synchronized Planarity\n\\(O((n+d)^8)\\subset O(n^{16})\\) via Atomic Embeddability\n\n\n\n\npolynomial if the subgraph induced by any cluster is connected (Lengauer1989?; Feng1995?)\n(Angelini2019?)\n(Cortese2008?)\n(Fulek2015?)\n(Gutwenger2002?)"
-  },
-  {
-    "objectID": "archive/clustered.html#related-problems",
-    "href": "archive/clustered.html#related-problems",
-    "title": "Clustered Planarity",
-    "section": "",
-    "text": "Reduces to Synchronized Planarity and Atomic Embeddability using the cd-Tree representation\nReduces to SEFE-2"
-  },
-  {
-    "objectID": "problems/sefe.html#partial-solutions",
-    "href": "problems/sefe.html#partial-solutions",
-    "title": "Simultaneous Embedding with Fixed Edges",
+    "objectID": "problems/proper-cl.html#partial-solutions",
+    "href": "problems/proper-cl.html#partial-solutions",
+    "title": "Proper Clustered Level Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/part-rot.html#partial-solutions",
-    "href": "problems/part-rot.html#partial-solutions",
-    "title": "Partial Rotation Planarity",
+    "objectID": "problems/streamed.html#partial-solutions",
+    "href": "problems/streamed.html#partial-solutions",
+    "title": "Streamed Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/ec-free.html#partial-solutions",
-    "href": "problems/ec-free.html#partial-solutions",
-    "title": "ec-Planarity with free edges",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/outer.html#partial-solutions",
-    "href": "problems/outer.html#partial-solutions",
-    "title": "Outer Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/partial.html#partial-solutions",
-    "href": "problems/partial.html#partial-solutions",
-    "title": "Partial Planarity",
+    "objectID": "problems/part-rot-flip.html#partial-solutions",
+    "href": "problems/part-rot-flip.html#partial-solutions",
+    "title": "Partial Rotation Planarity with flips",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
@@ -98,16 +42,51 @@
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/streamed-backbone.html#partial-solutions",
-    "href": "problems/streamed-backbone.html#partial-solutions",
-    "title": "Streamed Backbone Planarity",
+    "objectID": "problems/outer.html#partial-solutions",
+    "href": "problems/outer.html#partial-solutions",
+    "title": "Outer Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/abg.html#partial-solutions",
-    "href": "problems/abg.html#partial-solutions",
-    "title": "\\(\\langle \\alpha, \\beta, \\gamma \\rangle\\)-drawings",
+    "objectID": "problems/upw-emb.html#partial-solutions",
+    "href": "problems/upw-emb.html#partial-solutions",
+    "title": "(Embedded) Upward Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/sefe-3.html#partial-solutions",
+    "href": "problems/sefe-3.html#partial-solutions",
+    "title": "SEFE-3",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/level.html#partial-solutions",
+    "href": "problems/level.html#partial-solutions",
+    "title": "Level Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/clustered-level.html#partial-solutions",
+    "href": "problems/clustered-level.html#partial-solutions",
+    "title": "Clustered Level Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/part-tcoh-2-page.html#partial-solutions",
+    "href": "problems/part-tcoh-2-page.html#partial-solutions",
+    "title": "Partitioned \\(\\mathcal T\\)-coherent 2-page Book Embedding",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/strip.html#partial-solutions",
+    "href": "problems/strip.html#partial-solutions",
+    "title": "Strip Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
@@ -119,16 +98,30 @@
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/book.html#partial-solutions",
-    "href": "problems/book.html#partial-solutions",
-    "title": "Book?",
+    "objectID": "problems/c-sefe-2.html#partial-solutions",
+    "href": "problems/c-sefe-2.html#partial-solutions",
+    "title": "Connected SEFE-2",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/t-level.html#partial-solutions",
-    "href": "problems/t-level.html#partial-solutions",
-    "title": "\\(\\mathcal T\\)-level Planarity",
+    "objectID": "problems/streamed-backbone.html#partial-solutions",
+    "href": "problems/streamed-backbone.html#partial-solutions",
+    "title": "Streamed Backbone Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/part-2-page.html#partial-solutions",
+    "href": "problems/part-2-page.html#partial-solutions",
+    "title": "Partitioned 2-page Book Embedding",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/part-rot.html#partial-solutions",
+    "href": "problems/part-rot.html#partial-solutions",
+    "title": "Partial Rotation Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
@@ -168,125 +161,6 @@
     "text": "Related Problems\n\nReduces to Synchronized Planarity and Atomic Embeddability using the cd-Tree representation\nReduces to SEFE-2"
   },
   {
-    "objectID": "problems/part-tcoh-2-page.html#partial-solutions",
-    "href": "problems/part-tcoh-2-page.html#partial-solutions",
-    "title": "Partitioned \\(\\mathcal T\\)-coherent 2-page Book Embedding",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/standard.html#partial-solutions",
-    "href": "problems/standard.html#partial-solutions",
-    "title": "(Standard) Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/weak-realizeab.html#partial-solutions",
-    "href": "problems/weak-realizeab.html#partial-solutions",
-    "title": "Weak Realizability",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/proper-cl.html#partial-solutions",
-    "href": "problems/proper-cl.html#partial-solutions",
-    "title": "Proper Clustered Level Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/c-sefe-2.html#partial-solutions",
-    "href": "problems/c-sefe-2.html#partial-solutions",
-    "title": "Connected SEFE-2",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/clustered-level.html#partial-solutions",
-    "href": "problems/clustered-level.html#partial-solutions",
-    "title": "Clustered Level Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/rci-nodetrix.html#partial-solutions",
-    "href": "problems/rci-nodetrix.html#partial-solutions",
-    "title": "Row-Column-Independent NodeTrix Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/sefe-3.html#partial-solutions",
-    "href": "problems/sefe-3.html#partial-solutions",
-    "title": "SEFE-3",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/proper-tl.html#partial-solutions",
-    "href": "problems/proper-tl.html#partial-solutions",
-    "title": "Proper \\(\\mathcal T\\)-level Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/part-2-page.html#partial-solutions",
-    "href": "problems/part-2-page.html#partial-solutions",
-    "title": "Partitioned 2-page Book Embedding",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/sefe-2.html#partial-solutions",
-    "href": "problems/sefe-2.html#partial-solutions",
-    "title": "SEFE-2",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/streamed.html#partial-solutions",
-    "href": "problems/streamed.html#partial-solutions",
-    "title": "Streamed Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/part-tcoh-3-page.html#partial-solutions",
-    "href": "problems/part-tcoh-3-page.html#partial-solutions",
-    "title": "Partitioned \\(\\mathcal T\\)-coherent 3-page Book Embedding",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/strip.html#partial-solutions",
-    "href": "problems/strip.html#partial-solutions",
-    "title": "Strip Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/synchronized.html#partial-solutions",
-    "href": "problems/synchronized.html#partial-solutions",
-    "title": "Synchronized Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/ec.html#partial-solutions",
-    "href": "problems/ec.html#partial-solutions",
-    "title": "ec-Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/nodetrix.html#partial-solutions",
-    "href": "problems/nodetrix.html#partial-solutions",
-    "title": "NodeTrix Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
     "objectID": "problems/strip-emb.html#partial-solutions",
     "href": "problems/strip-emb.html#partial-solutions",
     "title": "(Embedded) Strip Planarity",
@@ -294,30 +168,9 @@
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/part-rot-flip.html#partial-solutions",
-    "href": "problems/part-rot-flip.html#partial-solutions",
-    "title": "Partial Rotation Planarity with flips",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/level.html#partial-solutions",
-    "href": "problems/level.html#partial-solutions",
-    "title": "Level Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/upw-emb.html#partial-solutions",
-    "href": "problems/upw-emb.html#partial-solutions",
-    "title": "(Embedded) Upward Planarity",
-    "section": "Partial Solutions",
-    "text": "Partial Solutions\n\nTODO"
-  },
-  {
-    "objectID": "problems/upward.html#partial-solutions",
-    "href": "problems/upward.html#partial-solutions",
-    "title": "Upward Planarity",
+    "objectID": "problems/abg.html#partial-solutions",
+    "href": "problems/abg.html#partial-solutions",
+    "title": "\\(\\langle \\alpha, \\beta, \\gamma \\rangle\\)-drawings",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
@@ -329,9 +182,30 @@
     "text": "Partial Solutions\n\nTODO"
   },
   {
-    "objectID": "problems/partially-emb.html#partial-solutions",
-    "href": "problems/partially-emb.html#partial-solutions",
-    "title": "Partially Embedded Planarity",
+    "objectID": "problems/part-tcoh-3-page.html#partial-solutions",
+    "href": "problems/part-tcoh-3-page.html#partial-solutions",
+    "title": "Partitioned \\(\\mathcal T\\)-coherent 3-page Book Embedding",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/proper-tl.html#partial-solutions",
+    "href": "problems/proper-tl.html#partial-solutions",
+    "title": "Proper \\(\\mathcal T\\)-level Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/book.html#partial-solutions",
+    "href": "problems/book.html#partial-solutions",
+    "title": "Book?",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/rci-nodetrix.html#partial-solutions",
+    "href": "problems/rci-nodetrix.html#partial-solutions",
+    "title": "Row-Column-Independent NodeTrix Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
   },
@@ -343,10 +217,101 @@
     "text": "Partial Solutions\n\nTODO"
   },
   {
+    "objectID": "problems/partial.html#partial-solutions",
+    "href": "problems/partial.html#partial-solutions",
+    "title": "Partial Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/ec.html#partial-solutions",
+    "href": "problems/ec.html#partial-solutions",
+    "title": "ec-Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/sefe-2.html#partial-solutions",
+    "href": "problems/sefe-2.html#partial-solutions",
+    "title": "SEFE-2",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/nodetrix.html#partial-solutions",
+    "href": "problems/nodetrix.html#partial-solutions",
+    "title": "NodeTrix Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/synchronized.html#partial-solutions",
+    "href": "problems/synchronized.html#partial-solutions",
+    "title": "Synchronized Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/partially-emb.html#partial-solutions",
+    "href": "problems/partially-emb.html#partial-solutions",
+    "title": "Partially Embedded Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
     "objectID": "problems/hierarchical.html#partial-solutions",
     "href": "problems/hierarchical.html#partial-solutions",
     "title": "Hierarchical Planarity",
     "section": "Partial Solutions",
     "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/standard.html#partial-solutions",
+    "href": "problems/standard.html#partial-solutions",
+    "title": "(Standard) Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/upward.html#partial-solutions",
+    "href": "problems/upward.html#partial-solutions",
+    "title": "Upward Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/ec-free.html#partial-solutions",
+    "href": "problems/ec-free.html#partial-solutions",
+    "title": "ec-Planarity with free edges",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/weak-realizeab.html#partial-solutions",
+    "href": "problems/weak-realizeab.html#partial-solutions",
+    "title": "Weak Realizability",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/sefe.html#partial-solutions",
+    "href": "problems/sefe.html#partial-solutions",
+    "title": "Simultaneous Embedding with Fixed Edges",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems/t-level.html#partial-solutions",
+    "href": "problems/t-level.html#partial-solutions",
+    "title": "\\(\\mathcal T\\)-level Planarity",
+    "section": "Partial Solutions",
+    "text": "Partial Solutions\n\nTODO"
+  },
+  {
+    "objectID": "problems.html",
+    "href": "problems.html",
+    "title": "Problems",
+    "section": "",
+    "text": "A list of constrained planarity problems\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\\(\\langle \\alpha, \\beta, \\gamma \\rangle\\)-drawings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\mathcal T\\)-level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Embedded) Strip Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Embedded) Upward Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Standard) Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBook?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClustered Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClustered Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConnected SEFE-2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHierarchical Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLevel Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaxSEFE\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNodeTrix Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOuter Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Rotation Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartial Rotation Planarity with flips\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartially Embedded Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartially PQ-constrained Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned \\(\\mathcal T\\)-coherent 2-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned \\(\\mathcal T\\)-coherent 3-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned 2-page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPartitioned 3-Page Book Embedding\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProper \\(\\mathcal T\\)-level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProper Clustered Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRadial Level Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRow-Column-Independent NodeTrix Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSEFE-2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSEFE-3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSimultaneous Embedding with Fixed Edges\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStreamed Backbone Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStreamed Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStrip Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSynchronized Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUpward Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeak Realizability\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nec-Planarity\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nec-Planarity with free edges\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
