@@ -1,0 +1,9 @@
+jupyter
+matplotlib
+pandas
+panflute
+python-frontmatter
+pylatexenc
+more_itertools
+ogdf_python
+ogdf_wheel

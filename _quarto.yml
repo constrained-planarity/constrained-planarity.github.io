@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Constrained Planarity"
-  description: "A comprehensive collection of contrained planarity variants."
+  description: "A comprehensive collection of constrained planarity variants."
   repo-url: "https://github.com/N-Coder/constrained-planarity"
   repo-actions: ["source"]
   navbar:
