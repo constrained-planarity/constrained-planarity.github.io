@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -59,9 +78,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -114,6 +130,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p>In the constrained planarity setting, we ask whether a graph can be drawn such that no edges cross and that some given further constraints are satisfied. Click on one of the problem variants below to explore what these constraints may look like, or read more about this website on the <a href="./about.html">About</a> page.</p>
 <style>
 svg a {
     text-decoration: none;
@@ -505,181 +522,16 @@ sefe-&gt;weakrealizeab
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-stdout">
-<pre><code>digraph G {
-    concentrate=true;
-    fontname="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif";
-    fontsize=18;
-    lheight=0;
-    node [fontname="'Source Sans Pro', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif", fillcolor="white", style="filled"];
-    subgraph cluster_P {
-        label="P";
-        labeljust=r;
-        radiallevel [label="Radial\nLevel\nPlanarity", href="/problems/radial-level.html"];
-        stripemb [label="(Embedded)\nStrip\nPlanarity", href="/problems/strip-emb.html"];
-        clustered [label="Clustered\nPlanarity", href="/problems/clustered.html"];
-        propertl [label="Proper\n𝒯-level\nPlanarity", href="/problems/proper-tl.html"];
-        partrot [label="Partial\nRotation\nPlanarity", href="/problems/part-rot.html"];
-        part2page [label="Partitioned\n2-page\nBook\nEmbedding", href="/problems/part-2-page.html"];
-        rcinodetrix [label="Row-\nColumn-\nIndependent\nNodeTrix\nPlanarity", href="/problems/rci-nodetrix.html"];
-        subgraph cluster_csefe2 {
-            label="";
-            style="invis";
-            { rank=same csefe2 parttcoh2page }
-            csefe2 [label="Connected\nSEFE-2", href="/problems/c-sefe-2.html"];
-            parttcoh2page [label="Partitioned\n𝒯-coherent\n2-page\nBook\nEmbedding", href="/problems/part-tcoh-2-page.html"];
-        }
-        partial [label="Partial\nPlanarity", href="/problems/partial.html"];
-        ec [label="ec-\nPlanarity", href="/problems/ec.html"];
-        strip [label="Strip\nPlanarity", href="/problems/strip.html"];
-        synchronized [label="Synchronized\nPlanarity", href="/problems/synchronized.html"];
-        level [label="Level\nPlanarity", href="/problems/level.html"];
-        partiallyemb [label="Partially\nEmbedded\nPlanarity", href="/problems/partially-emb.html"];
-        upwemb [label="(Embedded)\nUpward\nPlanarity", href="/problems/upw-emb.html"];
-        standard [label="(Standard)\nPlanarity", href="/problems/standard.html"];
-        outer [label="Outer\nPlanarity", href="/problems/outer.html"];
-        subgraph cluster_ecfree {
-            label="";
-            style="invis";
-            { rank=same ecfree partpqcons }
-            ecfree [label="ec-\nPlanarity\nwith free\nedges", href="/problems/ec-free.html"];
-            partpqcons [label="Partially\nPQ-\nconstrained\nPlanarity", href="/problems/part-pq-cons.html"];
-        }
-        partrotflip [label="Partial\nRotation\nPlanarity\nwith flips", href="/problems/part-rot-flip.html"];
-        propercl [label="Proper\nClustered\nLevel\nPlanarity", href="/problems/proper-cl.html"];
-    }
-    subgraph cluster_X {
-        label="?";
-        labeljust=r;
-        sefe2 [label="SEFE-2", href="/problems/sefe-2.html"];
-    }
-    subgraph cluster_NPC {
-        label="NPC";
-        labeljust=r;
-        abg [label="⟨α, β,\nγ⟩-drawings", href="/problems/abg.html"];
-        parttcoh3page [label="Partitioned\n𝒯-coherent\n3-page\nBook\nEmbedding", href="/problems/part-tcoh-3-page.html"];
-        book [label="Book?", href="/problems/book.html"];
-        streamedbackbone [label="Streamed\nBackbone\nPlanarity", href="/problems/streamed-backbone.html"];
-        maxsefe [label="MaxSEFE", href="/problems/max-sefe.html"];
-        nodetrix [label="NodeTrix\nPlanarity", href="/problems/nodetrix.html"];
-        clusteredlevel [label="Clustered\nLevel\nPlanarity", href="/problems/clustered-level.html"];
-        sefe3 [label="SEFE-3", href="/problems/sefe-3.html"];
-        hierarchical [label="Hierarchical\nPlanarity", href="/problems/hierarchical.html"];
-        upward [label="Upward\nPlanarity", href="/problems/upward.html"];
-        part3page [label="Partitioned\n3-Page\nBook\nEmbedding", href="/problems/part-3-page.html"];
-        streamed [label="Streamed\nPlanarity", href="/problems/streamed.html"];
-        subgraph cluster_sefe {
-            label="";
-            style="invis";
-            { rank=same sefe weakrealizeab }
-            sefe [label="Simultaneous\nEmbedding\nwith Fixed\nEdges", href="/problems/sefe.html"];
-            weakrealizeab [label="Weak\nRealizability", href="/problems/weak-realizeab.html"];
-        }
-        tlevel [label="𝒯-level\nPlanarity", href="/problems/t-level.html"];
-    }
-
-    radiallevel -&gt; { clustered };
-    stripemb -&gt; { upwemb , strip };
-    parttcoh3page -&gt; { sefe3 , streamedbackbone };
-    clustered -&gt; { synchronized , abg };
-    propertl -&gt; { tlevel , parttcoh2page };
-    partrot -&gt; { partiallyemb , partrotflip };
-    part2page -&gt; { parttcoh2page };
-    rcinodetrix -&gt; { synchronized , nodetrix };
-    streamedbackbone -&gt; { sefe };
-    csefe2 -&gt; { clustered };
-    csefe2 -&gt; { parttcoh2page } [dir=none, constraint=false, color="black:invis:black"];
-    partial -&gt; { streamedbackbone };
-    ec -&gt; { partiallyemb , ecfree };
-    strip -&gt; { clustered };
-    sefe2 -&gt; { maxsefe , sefe3 };
-    parttcoh2page -&gt; { part3page };
-    clusteredlevel -&gt; { sefe3 };
-    synchronized -&gt; { sefe2 };
-    level -&gt; { propercl , strip , radiallevel };
-    partiallyemb -&gt; { clustered };
-    sefe3 -&gt; { sefe };
-    upwemb -&gt; { upward };
-    standard -&gt; { level , part2page , ec , partrot , partial };
-    outer -&gt; { standard };
-    upward -&gt; { sefe };
-    part3page -&gt; { parttcoh3page };
-    ecfree -&gt; { synchronized };
-    ecfree -&gt; { partpqcons } [dir=none, constraint=false, color="black:invis:black"];
-    partrotflip -&gt; { ecfree };
-    streamed -&gt; { streamedbackbone };
-    sefe -&gt; { hierarchical };
-    sefe -&gt; { weakrealizeab } [dir=none, constraint=false, color="black:invis:black"];
-    propercl -&gt; { clusteredlevel , propertl };
-}</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">%%{init: {"flowchart": {"htmlLabels": false}} }%%
-flowchart TB
-    abg["⟨α, β,\nγ⟩-drawings"];
-    radial-level["Radial\nLevel\nPlanarity"] --&gt; clustered;
-    strip-emb["(Embedded)\nStrip\nPlanarity"] --&gt; upw-emb &amp; strip;
-    part-tcoh-3-page["Partitioned\n𝒯-coherent\n3-page\nBook\nEmbedding"] --&gt; sefe-3 &amp; streamed-backbone;
-    clustered["Clustered\nPlanarity"] --&gt; synchronized &amp; abg;
-    proper-tl["Proper\n𝒯-level\nPlanarity"] --&gt; t-level &amp; part-tcoh-2-page;
-    part-rot["Partial\nRotation\nPlanarity"] --&gt; partially-emb &amp; part-rot-flip;
-    book["Book?"];
-    part-2-page["Partitioned\n2-page\nBook\nEmbedding"] --&gt; part-tcoh-2-page;
-    rci-nodetrix["Row-\nColumn-\nIndependent\nNodeTrix\nPlanarity"] --&gt; synchronized &amp; nodetrix;
-    streamed-backbone["Streamed\nBackbone\nPlanarity"] --&gt; sefe;
-    max-sefe["MaxSEFE"];
-    c-sefe-2["Connected\nSEFE-2"] --&gt; clustered &amp; part-tcoh-2-page;
-    partial["Partial\nPlanarity"] --&gt; streamed-backbone;
-    part-pq-cons["Partially\nPQ-\nconstrained\nPlanarity"] --&gt; ec-free;
-    ec["ec-\nPlanarity"] --&gt; partially-emb &amp; ec-free;
-    strip["Strip\nPlanarity"] --&gt; clustered;
-    sefe-2["SEFE-2"] --&gt; max-sefe &amp; sefe-3;
-    part-tcoh-2-page["Partitioned\n𝒯-coherent\n2-page\nBook\nEmbedding"] --&gt; c-sefe-2 &amp; part-3-page;
-    nodetrix["NodeTrix\nPlanarity"];
-    clustered-level["Clustered\nLevel\nPlanarity"] --&gt; sefe-3;
-    synchronized["Synchronized\nPlanarity"] --&gt; sefe-2;
-    level["Level\nPlanarity"] --&gt; proper-cl &amp; strip &amp; radial-level;
-    partially-emb["Partially\nEmbedded\nPlanarity"] --&gt; clustered;
-    sefe-3["SEFE-3"] --&gt; sefe;
-    hierarchical["Hierarchical\nPlanarity"];
-    upw-emb["(Embedded)\nUpward\nPlanarity"] --&gt; upward;
-    standard["(Standard)\nPlanarity"] --&gt; level &amp; part-2-page &amp; ec &amp; part-rot &amp; partial;
-    outer["Outer\nPlanarity"] --&gt; standard;
-    upward["Upward\nPlanarity"] --&gt; sefe;
-    part-3-page["Partitioned\n3-Page\nBook\nEmbedding"] --&gt; part-tcoh-3-page;
-    ec-free["ec-\nPlanarity\nwith free\nedges"] --&gt; synchronized &amp; part-pq-cons;
-    part-rot-flip["Partial\nRotation\nPlanarity\nwith flips"] --&gt; ec-free;
-    weak-realizeab["Weak\nRealizability"] --&gt; sefe;
-    streamed["Streamed\nPlanarity"] --&gt; streamed-backbone;
-    sefe["Simultaneous\nEmbedding\nwith Fixed\nEdges"] --&gt; weak-realizeab &amp; hierarchical;
-    proper-cl["Proper\nClustered\nLevel\nPlanarity"] --&gt; clustered-level &amp; proper-tl;
-    t-level["𝒯-level\nPlanarity"];
-</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="cell" data-execution_count="5">
-<div class="cell-output cell-output-stderr">
-<pre><code>[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-142, $.cling-module-142.__inits.0, _ZN4ogdfL17s_ogdfInitializerE, _GLOBAL__sub_I_cling_module_142, __cxx_global_var_initcling_module_142_ }) }
-[runStaticInitializersOnce]: Failed to materialize symbols: { (main, { __orc_init_func.cling-module-142 }) }</code></pre>
-</div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="hierarchy.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Hierarchy</figcaption>
-</figure>
-</div>
+<p>This hierarchy was initially suggested by Schaefer <span class="citation" data-cites="Schaefer2013Theory">Schaefer (<a href="#ref-Schaefer2013Theory" role="doc-biblioref">2013</a>)</span> and later extended by Da Lozzo <span class="citation" data-cites="DaLozzo2015Planar">(<a href="#ref-DaLozzo2015Planar" role="doc-biblioref"><strong>DaLozzo2015Planar?</strong></a>)</span>.</p>
 
 
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Schaefer2013Theory" class="csl-entry" role="listitem">
+Schaefer, Marcus. 2013. <span>“Toward a Theory of Planarity: Hanani-Tutte and Planarity Variants.”</span> <em>J. Graph Algorithms Appl.</em> 17 (4): 367–440. <a href="https://doi.org/10.7155/jgaa.00298">https://doi.org/10.7155/jgaa.00298</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -917,4 +769,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/N-Coder/constrained-planarity/blob/main/index.qmd" class="toc-action">View source</a></p></div></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/constrained-planarity/constrained-planarity.github.io/blob/main/index.qmd" class="toc-action">View source</a></p></div></div></div></div></footer></body></html>
