@@ -2,6 +2,7 @@
 title: Clustered Planarity
 complexity: P
 reduces_to: ['synchronized', 'abg']
+image: ../graphics/clustered.svg
 ---
 
 ## Definition

@@ -2,4 +2,8 @@
 title: "About"
 ---
 
+:::{.column-margin}
+![](logo/logo-large.svg){width=100%}
+:::
+
 About this site

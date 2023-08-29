@@ -5,6 +5,7 @@ listing:
   type: grid
   fields: [image, title, description]
   filter-ui: [title]
+  image-placeholder: logo/logo-large-faded.svg
 ---
 
-The following constrained planarity problems are listed in this website:
+The following constrained planarity problems are listed on this website:

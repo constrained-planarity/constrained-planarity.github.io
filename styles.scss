@@ -1,3 +1,8 @@
 /*-- scss:defaults --*/
-$navbar-bg: $gray-900;
-$navbar-fg: white;
+//$navbar-bg: $gray-900;
+//$navbar-fg: white;
+
+.navbar-logo {
+  max-height: 36px !important;
+  padding-right: 8px !important;
+}

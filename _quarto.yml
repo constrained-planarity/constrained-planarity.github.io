@@ -7,6 +7,9 @@ website:
   repo-url: "https://github.com/constrained-planarity/constrained-planarity.github.io"
   repo-actions: ["source"]
   navbar:
+    logo: logo/logo-dark.svg
+    background: dark
+    foreground: light
     left:
       - href: index.qmd
         text: Overview
@@ -14,6 +17,7 @@ website:
       - about.qmd
   search:
     type: textbox
+
 
 bibliography: references.bib
 
