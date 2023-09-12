@@ -1,11 +1,12 @@
 ---
 title: $\langle \alpha, \beta, \gamma \rangle$-drawings
 complexity: NPC
-reduces_to: ['']
+reduces_to: {}
 ---
 
 # Definition
 
+[@alb-rtc-15]
 <!-- TODO -->
 
 # Background

@@ -28,8 +28,9 @@ dot()
 print("`"*3)
 ```
 
+
 ```{python}
 # dot()
 ```
 
-This hierarchy was initially suggested by Schaefer @Schaefer2013Theory and later extended by Da Lozzo @DaLozzo2015Planar.
+This hierarchy was initially suggested by @sch-tat-13 and later extended by @dloz-pgw-15.

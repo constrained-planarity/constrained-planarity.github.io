@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from panflute import convert_text
 
 from scripts.parse import problems
 
@@ -21,6 +22,11 @@ def mermaid():
 
 def dot_node(k, p):
     return f"""{no_dash(k)} [label="{p['label_wrapped']}", href="/problems/{k}.html"];"""
+
+
+def parse_cite(c):
+    lines = convert_text(c, output_format="plain", extra_args=["--bibliography", "references.bib", "--citeproc"])
+    return lines.splitlines()[0]
 
 
 def dot():
@@ -55,8 +61,11 @@ def dot():
         print("\t}")
     print()
     for k, p in problems.items():
-        if p["above"]:
-            print(f"\t{no_dash(k)} -> {{ " + " , ".join(no_dash(p["above"])) + " };")
+        for a in p["above"]:
+            props = ""
+            # if isinstance(problems[k]["reduces_to"], dict):
+            #     props = " [label=\"" + parse_cite(problems[k]["reduces_to"][a]) + "\"]"
+            print(f"\t{no_dash(k)} -> {{ " + no_dash(a) + " }" + props + ";")
         if p["same_dedup"]:
             print(f"\t{no_dash(k)} -> {{ " + " , ".join(no_dash(p['same_dedup'])) + " } " +
                   "[dir=none, constraint=false, color=\"black:invis:black\"];")
