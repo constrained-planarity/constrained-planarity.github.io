@@ -91,6 +91,9 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo/logo-dark.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Constrained Planarity</span>
     </a>
@@ -130,15 +133,9 @@ div.csl-indent {
    
   <ul>
   <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a>
-  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a></li>
   <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See also</a></li>
-  </ul></li>
-  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a>
-  <ul class="collapse">
-  <li><a href="#partial-solutions" id="toc-partial-solutions" class="nav-link" data-scroll-target="#partial-solutions">Partial Solutions</a></li>
-  </ul></li>
-  <li><a href="#related-problems" id="toc-related-problems" class="nav-link" data-scroll-target="#related-problems">Related Problems</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/constrained-planarity/constrained-planarity.github.io/blob/main/problems/clustered.md" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -162,50 +159,41 @@ div.csl-indent {
 
 </header>
 
-<section id="definition" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<section id="definition" class="level1 page-columns page-full">
+<h1>Definition</h1>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="../graphics/clustered.svg" class="img-fluid" style="width:100.0%"></p>
-</div></div><p>Given a graph <span class="math inline">\(G=(V,E)\)</span> equipped with a cluster hierarchy <span class="math inline">\(T\)</span>, which is a rooted tree with the vertices <span class="math inline">\(V\)</span> as leaves. Each inner node <span class="math inline">\(\mu\)</span> of <span class="math inline">\(T\)</span> represents a <em>cluster</em> encompassing all leaves <span class="math inline">\(V_\mu\)</span> of the subtree rooted at <span class="math inline">\(\mu\)</span>. A cluster planar drawing is a planar drawing that also maps every cluster <span class="math inline">\(\mu\)</span> to a simple closed region <span class="math inline">\(R_\mu\)</span> such that 1. <span class="math inline">\(R_\mu\)</span> encloses exactly the vertices <span class="math inline">\(V_\mu\)</span>, 2. no two cluster region boundaries intersect, and 3. no edge intersects the boundary of a cluster more than once. A cluster graph is cluster planar if it admits a cluster planar drawing.</p>
+</div></div><p>A graph is cluster planar if there is a planar drawing of it where we can also add its clusters as closed regions that only cross the edges that leave the respective cluster.</p>
+<p>Formally, given a graph <span class="math inline">\(G=(V,E)\)</span> equipped with a cluster hierarchy <span class="math inline">\(T\)</span>, which is a rooted tree with the vertices <span class="math inline">\(V\)</span> as leaves. Each inner node <span class="math inline">\(\mu\)</span> of <span class="math inline">\(T\)</span> represents a <em>cluster</em> encompassing all leaves <span class="math inline">\(V_\mu\)</span> of the subtree rooted at <span class="math inline">\(\mu\)</span>. A cluster planar drawing is a planar drawing that also maps every cluster <span class="math inline">\(\mu\)</span> to a simple closed region <span class="math inline">\(R_\mu\)</span> such that</p>
+<ol type="1">
+<li><span class="math inline">\(R_\mu\)</span> encloses exactly the vertices <span class="math inline">\(V_\mu\)</span>,</li>
+<li>no two cluster region boundaries intersect, and</li>
+<li>no edge intersects the boundary of a cluster more than once. A cluster graph is cluster planar if it admits a cluster planar drawing.</li>
+</ol>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p><span class="citation" data-cites="Lengauer1989Hierarchical">Lengauer (<a href="#ref-Lengauer1989Hierarchical" role="doc-biblioref">1989</a>)</span> first discussed Clustered Planarity under a different name, which is why it was later independently rediscovered by <span class="citation" data-cites="Feng1995Planarity">Feng, Cohen, and Eades (<a href="#ref-Feng1995Planarity" role="doc-biblioref">1995</a>)</span>. Both gave polynomial-time algorithms for the case where the subgraph induced by any cluster is connected. While efficient algorithms were found for many other special cases <span class="citation" data-cites="Angelini2019">(<a href="#ref-Angelini2019" role="doc-biblioref"><strong>Angelini2019?</strong></a>)</span> <span class="citation" data-cites="Cortese2008">(<a href="#ref-Cortese2008" role="doc-biblioref"><strong>Cortese2008?</strong></a>)</span> <span class="citation" data-cites="Fulek2015">(<a href="#ref-Fulek2015" role="doc-biblioref"><strong>Fulek2015?</strong></a>)</span> <span class="citation" data-cites="Gutwenger2002">(<a href="#ref-Gutwenger2002" role="doc-biblioref"><strong>Gutwenger2002?</strong></a>)</span>, it took almost 30 years until <span class="citation" data-cites="Fulek2022Atomic">Fulek and Tóth (<a href="#ref-Fulek2022Atomic" role="doc-biblioref">2022</a>)</span> found an <span class="math inline">\(O((n+d)^8)\)</span> solution to the general problem in 2019. Subsequently, Bläsius et al. <span class="citation" data-cites="Blaesius2021">(<a href="#ref-Blaesius2021" role="doc-biblioref"><strong>Blaesius2021?</strong></a>)</span> gave a solution with a running time of <span class="math inline">\(O((n+d)^2)\)</span>, which also reveals the main concepts for solving Clustered Planarity.</p>
-<section id="see-also" class="level3">
-<h3 class="anchored" data-anchor-id="see-also">See also</h3>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p><span class="citation" data-cites="len-hpt-89">Lengauer (<a href="#ref-len-hpt-89" role="doc-biblioref">1989</a>)</span> studied and solved this problem as early as 1989 in the setting where the clusters are connected. <span class="citation" data-cites="fce-pfc-95">Feng, Cohen, and Eades (<a href="#ref-fce-pfc-95" role="doc-biblioref">1995</a>)</span>, who coined the term Clustered Planarity, rediscovered this algorithm and asked the general question where disconnected clusters are allowed. This question remained open for 30 years. In that time, polynomial-time algorithms were found for many special-cases <span class="citation" data-cites="adl-cpw-19 cdbf-cpo-08 fkmp-cpt-15 gjl-aic-02">(<a href="#ref-adl-cpw-19" role="doc-biblioref">Angelini and Da Lozzo 2019</a>; <a href="#ref-cdbf-cpo-08" role="doc-biblioref">Cortese et al. 2008</a>; <a href="#ref-fkmp-cpt-15" role="doc-biblioref">Fulek et al. 2015</a>; <a href="#ref-gjl-aic-02" role="doc-biblioref">Gutwenger et al. 2002</a>)</span> before <span class="citation" data-cites="ft-aec-22">Fulek and Tóth (<a href="#ref-ft-aec-22" role="doc-biblioref">2022</a>)</span> found an <span class="math inline">\(O((n+d)^8)\)</span> solution in 2019, where <span class="math inline">\(d\)</span> is the number of crossings between a cluster-border and an edge leaving the cluster. Subsequently, <span class="citation" data-cites="bfr-spw-21">Bläsius, Fink, and Rutter (<a href="#ref-bfr-spw-21" role="doc-biblioref">2023</a>)</span> gave a solution via <span><a href="../problems/synchronized.html">Synchronized Planarity</a></span> with a running time of <span class="math inline">\(O((n+d)^2)\)</span>, which also reveals the main concepts for solving Clustered Planarity.</p>
+</section>
+<section id="complexity" class="level1">
+<h1>Complexity</h1>
+<p>Let <span class="math inline">\(d\)</span> be the number of edge-cluster boundary crossings and <span class="math inline">\(\Delta\)</span> be the maximum number of edges crossing a single cluster border. While there are no direct solutions to the problem, Clustered Planarity can be solved in time…</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Clustered_planarity">Wikipedia</a></li>
-<li><span class="citation" data-cites="Schaefer2013Theory">Schaefer (<a href="#ref-Schaefer2013Theory" role="doc-biblioref">2013</a>)</span></li>
-<li><span class="citation" data-cites="Patrignani2013Planarity">Patrignani (<a href="#ref-Patrignani2013Planarity" role="doc-biblioref">2013</a>)</span></li>
+<li><span class="math inline">\(O((n+d)^2)\subset O(n^4)\)</span> via <span><a href="../problems/synchronized.html">Synchronized Planarity</a></span> <span class="citation" data-cites="bfr-spw-21">(<a href="#ref-bfr-spw-21" role="doc-biblioref">Bläsius, Fink, and Rutter 2023</a>)</span></li>
+<li><span class="math inline">\(O(n+d\cdot \Delta)\subset O(n^4)\)</span> via <span><a href="../problems/synchronized.html">Synchronized Planarity</a></span> with SPQR-node expansion <span class="citation" data-cites="fr-mtc-23">(<a href="#ref-fr-mtc-23" role="doc-biblioref">Fink and Rutter 2023</a>)</span></li>
+<li><span class="math inline">\(O((n+d)^8)\subset O(n^{16})\)</span> via Atomic Embeddability <span class="citation" data-cites="ft-aec-22">(<a href="#ref-ft-aec-22" role="doc-biblioref">Fulek and Tóth 2022</a>)</span></li>
 </ul>
-</section>
-</section>
-<section id="complexity" class="level2">
-<h2 class="anchored" data-anchor-id="complexity">Complexity</h2>
-<p>Let <span class="math inline">\(d\)</span> be the number of edge-cluster boundary crossings and $be the maximum number of edges crossing a single cluster border. Clustered Planarity can be solved in time…</p>
-<ul>
-<li><span class="math inline">\(O(n+d\cdot \Delta)\subset O(n^4)\)</span> via Synchronized Planarity with SPQR-node expansion</li>
-<li><span class="math inline">\(O((n+d)^2)\subset O(n^4)\)</span> via Synchronized Planarity</li>
-<li><span class="math inline">\(O((n+d)^8)\subset O(n^{16})\)</span> via Atomic Embeddability</li>
-</ul>
+<p>All these reductions use the cd-Tree representation of Clustered Planarity <span class="citation" data-cites="br-anp-16">(<a href="#ref-br-anp-16" role="doc-biblioref">Bläsius and Rutter 2016</a>)</span>. As the reduction subdivides an edge for each cluster boundary it crosses, the representation has size <span class="math inline">\(O(n+d)\)</span>.</p>
 <p><img src="../graphics/clustered-cd-tree-1.svg" class="img-fluid" style="width:30.0%"> <img src="../graphics/clustered-cd-tree-2.svg" class="img-fluid" style="width:65.0%"></p>
-<section id="partial-solutions" class="level3">
-<h3 class="anchored" data-anchor-id="partial-solutions">Partial Solutions</h3>
-<ul>
-<li>polynomial if the subgraph induced by any cluster is connected <span class="citation" data-cites="Lengauer1989 Feng1995">(<a href="#ref-Lengauer1989" role="doc-biblioref"><strong>Lengauer1989?</strong></a>; <a href="#ref-Feng1995" role="doc-biblioref"><strong>Feng1995?</strong></a>)</span></li>
-<li><span class="citation" data-cites="Angelini2019">(<a href="#ref-Angelini2019" role="doc-biblioref"><strong>Angelini2019?</strong></a>)</span></li>
-<li><span class="citation" data-cites="Cortese2008">(<a href="#ref-Cortese2008" role="doc-biblioref"><strong>Cortese2008?</strong></a>)</span></li>
-<li><span class="citation" data-cites="Fulek2015">(<a href="#ref-Fulek2015" role="doc-biblioref"><strong>Fulek2015?</strong></a>)</span></li>
-<li><span class="citation" data-cites="Gutwenger2002">(<a href="#ref-Gutwenger2002" role="doc-biblioref"><strong>Gutwenger2002?</strong></a>)</span></li>
-</ul>
+<p>Clustered Planarity also reduces to <span><a href="../problems/sefe-2.html">SEFE-2</a></span> by representing the cluster boundary, where the order of edges leaving needs to correspond to the order of the same edges entering, via a gadget <span class="citation" data-cites="sch-tat-13 rut-se-20">(<a href="#ref-sch-tat-13" role="doc-biblioref">Schaefer 2013</a>, Theorem 6.17; see also <a href="#ref-rut-se-20" role="doc-biblioref">Rutter 2020, sec. 13.2.2</a>)</span>.</p>
+<p><span><a href="../problems/abg.html"><span class="math inline">\(\langle \alpha, \beta, \gamma \rangle\)</span>-drawings</a></span> are a generalization of Clustered Planarity, where given counts of edge-edge, cluster-cluster, and cluster-edge crossings are allowed <span class="citation" data-cites="alb-rtc-15">(<a href="#ref-alb-rtc-15" role="doc-biblioref">Angelini et al. 2015</a>)</span>.</p>
 </section>
-</section>
-<section id="related-problems" class="level2">
-<h2 class="anchored" data-anchor-id="related-problems">Related Problems</h2>
+<section id="see-also" class="level1">
+<h1>See also</h1>
 <ul>
-<li>Reduces to <a href="../problems/synchronized.html">Synchronized Planarity</a> and Atomic Embeddability using the cd-Tree representation</li>
-<li>Reduces to <a href="../problems/sefe-2.html">SEFE-2</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Clustered_planarity">Wikipedia Article</a></li>
+<li>Handbook on Graph Drawing and Visualization <span class="citation" data-cites="pat-pta-13">(<a href="#ref-pat-pta-13" role="doc-biblioref">Patrignani 2013, sec. 1.8.2</a>)</span></li>
 </ul>
 
 
@@ -213,20 +201,47 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Feng1995Planarity" class="csl-entry" role="listitem">
-Feng, Qing-Wen, Robert F. Cohen, and Peter Eades. 1995. <span>“Planarity for Clustered Graphs.”</span> In <em>Algorithms - <span>ESA</span> ’95, Third Annual European Symposium, Corfu, Greece, September 25-27, 1995, Proceedings</em>, edited by Paul G. Spirakis, 979:213–26. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/3-540-60313-1_145">https://doi.org/10.1007/3-540-60313-1_145</a>.
+<div id="ref-adl-cpw-19" class="csl-entry" role="listitem">
+Angelini, Patrizio, and Giordano Da Lozzo. 2019. <span>“Clustered Planarity with Pipes.”</span> <em>Algorithmica</em> 81 (6): 2484–2526. <a href="https://doi.org/10.1007/s00453-018-00541-w">https://doi.org/10.1007/s00453-018-00541-w</a>.
 </div>
-<div id="ref-Fulek2022Atomic" class="csl-entry" role="listitem">
-Fulek, Radoslav, and Csaba D. Tóth. 2022. <span>“Atomic Embeddability, Clustered Planarity, and Thickenability.”</span> <em>J. <span>ACM</span></em> 69 (2): 13:1–34. <a href="https://doi.org/10.1145/3502264">https://doi.org/10.1145/3502264</a>.
+<div id="ref-alb-rtc-15" class="csl-entry" role="listitem">
+Angelini, Patrizio, Giordano Da Lozzo, Giuseppe Di Battista, Fabrizio Frati, Maurizio Patrignani, and Vincenzo Roselli. 2015. <span>“Relaxing the Constraints of Clustered Planarity.”</span> <em>Computational Geometry</em> 48 (2): 42–75. <a href="https://doi.org/10.1016/j.comgeo.2014.08.001">https://doi.org/10.1016/j.comgeo.2014.08.001</a>.
 </div>
-<div id="ref-Lengauer1989Hierarchical" class="csl-entry" role="listitem">
-Lengauer, Thomas. 1989. <span>“Hierarchical Planarity Testing Algorithms.”</span> <em>J. <span>ACM</span></em> 36 (3): 474–509. <a href="https://doi.org/10.1145/65950.65952">https://doi.org/10.1145/65950.65952</a>.
+<div id="ref-bfr-spw-21" class="csl-entry" role="listitem">
+Bläsius, Thomas, Simon D. Fink, and Ignaz Rutter. 2023. <span>“Synchronized Planarity with Applications to Constrained Planarity Problems.”</span> <em><span>ACM</span> Transactions on Algorithms</em>. <a href="https://doi.org/10.1145/3607474">https://doi.org/10.1145/3607474</a>.
 </div>
-<div id="ref-Patrignani2013Planarity" class="csl-entry" role="listitem">
+<div id="ref-br-anp-16" class="csl-entry" role="listitem">
+Bläsius, Thomas, and Ignaz Rutter. 2016. <span>“A New Perspective on Clustered Planarity as a Combinatorial Embedding Problem.”</span> <em>Theoretical Computer Science</em> 609: 306–15. <a href="https://doi.org/10.1016/j.tcs.2015.10.011">https://doi.org/10.1016/j.tcs.2015.10.011</a>.
+</div>
+<div id="ref-cdbf-cpo-08" class="csl-entry" role="listitem">
+Cortese, Pier Francesco, Giuseppe Di Battista, Fabrizio Frati, Maurizio Patrignani, and Maurizio Pizzonia. 2008. <span>“C-Planarity of c-Connected Clustered Graphs.”</span> <em>Journal of Graph Algorithms and Applications</em> 12 (2): 225–62. <a href="https://doi.org/10.7155/jgaa.00165">https://doi.org/10.7155/jgaa.00165</a>.
+</div>
+<div id="ref-fce-pfc-95" class="csl-entry" role="listitem">
+Feng, Qing-Wen, Robert F. Cohen, and Peter Eades. 1995. <span>“Planarity for Clustered Graphs.”</span> In <em>Proceedings of the 3<sup>rd</sup> Annual European Symposium on Algorithms (ESA’95)</em>, edited by Paul G. Spirakis, 979:213–26. LNCS. Springer. <a href="https://doi.org/10.1007/3-540-60313-1_145">https://doi.org/10.1007/3-540-60313-1_145</a>.
+</div>
+<div id="ref-fr-mtc-23" class="csl-entry" role="listitem">
+Fink, Simon D., and Ignaz Rutter. 2023. <span>“Maintaining Triconnected Components Under Node Expansion.”</span> In <em>Proceedings of the 13th Conference on Algorithms and Complexity (CIAC’23)</em>, edited by Marios Mavronicolas, 13898:202–16. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-031-30448-4_15">https://doi.org/10.1007/978-3-031-30448-4_15</a>.
+</div>
+<div id="ref-fkmp-cpt-15" class="csl-entry" role="listitem">
+Fulek, Radoslav, Jan Kynčl, Igor Malinović, and Dömötör Pálvölgyi. 2015. <span>“Clustered Planarity Testing Revisited.”</span> <em>The Electronic Journal of Combinatorics</em> 22 (4). <a href="https://doi.org/10.37236/5002">https://doi.org/10.37236/5002</a>.
+</div>
+<div id="ref-ft-aec-22" class="csl-entry" role="listitem">
+Fulek, Radoslav, and Csaba D. Tóth. 2022. <span>“Atomic Embeddability, Clustered Planarity, and Thickenability.”</span> <em>Journal of the <span>ACM</span></em> 69 (2): 13:1–34. <a href="https://doi.org/10.1145/3502264">https://doi.org/10.1145/3502264</a>.
+</div>
+<div id="ref-gjl-aic-02" class="csl-entry" role="listitem">
+Gutwenger, Carsten, Michael Jünger, Sebastian Leipert, Petra Mutzel, Merijam Percan, and René Weiskircher. 2002. <span>“Advances in c-Planarity Testing of Clustered Graphs.”</span> In <em>Proceedings of the 10<sup>th</sup> International Symposium on Graph Drawing (GD’02)</em>, edited by Stephen G. Kobourov and Michael T. Goodrich, 2528:220–35. LNCS. Springer. <a href="https://doi.org/10.1007/3-540-36151-0_21">https://doi.org/10.1007/3-540-36151-0_21</a>.
+</div>
+<div id="ref-len-hpt-89" class="csl-entry" role="listitem">
+Lengauer, Thomas. 1989. <span>“Hierarchical Planarity Testing Algorithms.”</span> <em>Journal of the ACM</em> 36 (3): 474–509. <a href="https://doi.org/10.1145/65950.65952">https://doi.org/10.1145/65950.65952</a>.
+</div>
+<div id="ref-pat-pta-13" class="csl-entry" role="listitem">
 Patrignani, Maurizio. 2013. <span>“Planarity Testing and Embedding.”</span> In <em>Handbook on Graph Drawing and Visualization</em>, edited by Roberto Tamassia, 1–42. Chapman; Hall/CRC. <a href="https://cs.brown.edu/people/rtamassi/gdhandbook/chapters/planarity.pdf">https://cs.brown.edu/people/rtamassi/gdhandbook/chapters/planarity.pdf</a>.
 </div>
-<div id="ref-Schaefer2013Theory" class="csl-entry" role="listitem">
-Schaefer, Marcus. 2013. <span>“Toward a Theory of Planarity: Hanani-Tutte and Planarity Variants.”</span> <em>J. Graph Algorithms Appl.</em> 17 (4): 367–440. <a href="https://doi.org/10.7155/jgaa.00298">https://doi.org/10.7155/jgaa.00298</a>.
+<div id="ref-rut-se-20" class="csl-entry" role="listitem">
+Rutter, Ignaz. 2020. <span>“Simultaneous Embedding.”</span> In <em>Beyond Planar Graphs</em>, edited by Seok-Hee Hong and Takeshi Tokuyama, 237–65. Springer Singapore. <a href="https://doi.org/10.1007/978-981-15-6533-5_13">https://doi.org/10.1007/978-981-15-6533-5_13</a>.
+</div>
+<div id="ref-sch-tat-13" class="csl-entry" role="listitem">
+Schaefer, Marcus. 2013. <span>“Toward a Theory of Planarity: Hanani-Tutte and Planarity Variants.”</span> <em>Journal of Graph Algorithms and Applications</em> 17 (4): 367–440. <a href="https://doi.org/10.7155/jgaa.00298">https://doi.org/10.7155/jgaa.00298</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

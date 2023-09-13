@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,6 +89,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo/logo-dark.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Constrained Planarity</span>
     </a>
@@ -109,12 +131,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a>
-  <ul class="collapse">
-  <li><a href="#partial-solutions" id="toc-partial-solutions" class="nav-link" data-scroll-target="#partial-solutions">Partial Solutions</a></li>
-  </ul></li>
+  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a></li>
   <li><a href="#related-problems" id="toc-related-problems" class="nav-link" data-scroll-target="#related-problems">Related Problems</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/constrained-planarity/constrained-planarity.github.io/blob/main/problems/radial-level.md" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -140,35 +159,43 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="definition" class="level1">
 <h1>Definition</h1>
-<!-- TODO -->
-</section>
-<section id="background" class="level1">
-<h1>Background</h1>
-<!-- TODO -->
+<p>Radial Level Planarity is a generalization of <span><a href="../problems/level.html">Level Planarity</a></span> where levels are not represented by axis-parallel lines, but by concentric rings. Equivalently, this can be seen as drawing the horizontal levels on a standing torus instead of in the plane.</p>
 </section>
 <section id="complexity" class="level1">
 <h1>Complexity</h1>
-<p>Radial Level Planarity can be solved in time…</p>
-<ul>
-<li>TODO</li>
-</ul>
-<section id="partial-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="partial-solutions">Partial Solutions</h2>
-<ul>
-<li>TODO</li>
-</ul>
-</section>
+<p>Testing level planarity can be reduced to the radial variant by introducing an edge from the lowest to the highest level, at which the cylinder can be cut to transform a radial solution back into the plane. Bachmaier et al.&nbsp;give a linear-time algorithm for testing radial level planarity <span class="citation" data-cites="bbf-rlp-05">Bachmaier, Brandenburg, and Forster (<a href="#ref-bbf-rlp-05" role="doc-biblioref">2005</a>)</span>. While the dissertation by <span class="citation" data-cites="bac-cpo-04">Bachmaier (<a href="#ref-bac-cpo-04" role="doc-biblioref">2004</a>)</span> describes a prototypical implementation, no implementations exist of this algorithm. <span class="citation" data-cites="brue-pvf-21">Brückner (<a href="#ref-brue-pvf-21" role="doc-biblioref">2021</a>)</span> points out some issues with the algorithm by <span class="citation" data-cites="bbf-rlp-05">Bachmaier, Brandenburg, and Forster (<a href="#ref-bbf-rlp-05" role="doc-biblioref">2005</a>)</span>. A simple polynomial-time algorithm is suggested by <span class="citation" data-cites="brs-lpt-22">Brückner, Rutter, and Stumpf (<a href="#ref-brs-lpt-22" role="doc-biblioref">2022</a>)</span>.</p>
 </section>
 <section id="related-problems" class="level1">
 <h1>Related Problems</h1>
+<p>Reduces to <span><a href="../problems/clustered.html">Clustered Planarity</a></span> by interpreting the concentric levels (including all levels below) as clusters <span class="citation" data-cites="sch-tat-13">(<a href="#ref-sch-tat-13" role="doc-biblioref">Schaefer 2013</a>, Lemma 6.18)</span>.</p>
+</section>
+<section id="see-also" class="level1">
+<h1>See Also</h1>
 <ul>
-<li>Reduces to <a href="../problems/clustered.html">Clustered Planarity</a></li>
+<li>Planarity Variants for Directed Graphs <span class="citation" data-cites="brue-pvf-21">(<a href="#ref-brue-pvf-21" role="doc-biblioref">Brückner 2021</a>)</span></li>
 </ul>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bac-cpo-04" class="csl-entry" role="listitem">
+Bachmaier, Christian. 2004. <span>“Circle Planarity of Level Graphs.”</span> PhD thesis, University of Passau, Germany. <a href="http://www.opus-bayern.de/uni-passau/volltexte/2004/38/index.html">http://www.opus-bayern.de/uni-passau/volltexte/2004/38/index.html</a>.
+</div>
+<div id="ref-bbf-rlp-05" class="csl-entry" role="listitem">
+Bachmaier, Christian, Franz-Josef Brandenburg, and Michael Forster. 2005. <span>“Radial Level Planarity Testing and Embedding in Linear Time.”</span> <em>Journal of Graph Algorithms and Applications</em> 9 (1): 53–97. <a href="https://doi.org/10.7155/jgaa.00100">https://doi.org/10.7155/jgaa.00100</a>.
+</div>
+<div id="ref-brue-pvf-21" class="csl-entry" role="listitem">
+Brückner, Guido. 2021. <span>“Planarity Variants for Directed Graphs.”</span> PhD thesis, Karlsruhe Institute of Technology, Germany. <a href="https://nbn-resolving.org/urn:nbn:de:101:1-2021080405022988868936">https://nbn-resolving.org/urn:nbn:de:101:1-2021080405022988868936</a>.
+</div>
+<div id="ref-brs-lpt-22" class="csl-entry" role="listitem">
+Brückner, Guido, Ignaz Rutter, and Peter Stumpf. 2022. <span>“Level-Planarity: Transitivity Vs. Even Crossings.”</span> <em>The Electronic Journal of Combinatorics</em> 29 (4). <a href="https://doi.org/10.37236/10814">https://doi.org/10.37236/10814</a>.
+</div>
+<div id="ref-sch-tat-13" class="csl-entry" role="listitem">
+Schaefer, Marcus. 2013. <span>“Toward a Theory of Planarity: Hanani-Tutte and Planarity Variants.”</span> <em>Journal of Graph Algorithms and Applications</em> 17 (4): 367–440. <a href="https://doi.org/10.7155/jgaa.00298">https://doi.org/10.7155/jgaa.00298</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

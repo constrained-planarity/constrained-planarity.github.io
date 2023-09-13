@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -60,6 +79,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -70,6 +91,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../logo/logo-dark.svg" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Constrained Planarity</span>
     </a>
@@ -109,12 +133,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a>
-  <ul class="collapse">
-  <li><a href="#partial-solutions" id="toc-partial-solutions" class="nav-link" data-scroll-target="#partial-solutions">Partial Solutions</a></li>
-  </ul></li>
+  <li><a href="#complexity" id="toc-complexity" class="nav-link" data-scroll-target="#complexity">Complexity</a></li>
   <li><a href="#related-problems" id="toc-related-problems" class="nav-link" data-scroll-target="#related-problems">Related Problems</a></li>
+  <li><a href="#see-also" id="toc-see-also" class="nav-link" data-scroll-target="#see-also">See Also</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/constrained-planarity/constrained-planarity.github.io/blob/main/problems/level.md" class="toc-action">View source</a></p></div></div></nav>
     </div>
@@ -141,39 +162,63 @@ ul.task-list li input[type="checkbox"] {
 <section id="definition" class="level1 page-columns page-full">
 <h1>Definition</h1>
 
-<!-- TODO -->
 <div class="no-row-height column-margin column-container"><div class="">
 <p><img src="../graphics/level.svg" class="img-fluid" style="width:100.0%"></p>
-</div></div></section>
-<section id="background" class="level1">
-<h1>Background</h1>
-<!-- TODO -->
+</div></div><p>A graph is level planar if it can be embedded in the plane such that no two edges cross and the vertices lie on some prescribed horizontal lines.</p>
+<p>Formally, in Level Planarity, the directed graph <span class="math inline">\(G=(V,E)\)</span> is equipped with a function <span class="math inline">\(\gamma : V \mapsto \{1,2,\ldots,k\}\)</span> with <span class="math inline">\(k\in\mathbb{N}\)</span> such that for every edge <span class="math inline">\((u,v)\in E\)</span> it is <span class="math inline">\(\gamma(u)&lt;\gamma(v)\)</span>. The level graph is called <em>proper</em> if it is <span class="math inline">\(\gamma(u)+1=\gamma(v)\)</span> for every edge. With <span class="math inline">\(V_i=\gamma^{-1}(i)\)</span> we denote all vertices on level <span class="math inline">\(i\)</span>. A level planar drawing maps all vertices <span class="math inline">\(v\in V_I\)</span> of a level <span class="math inline">\(i\)</span> to a point on the line <span class="math inline">\(y=i\)</span> such that every edge is y-monotone and no two edges cross. A level graph is level planar if it admits a level planar drawing.</p>
 </section>
 <section id="complexity" class="level1">
 <h1>Complexity</h1>
-<p>Level Planarity can be solved in time…</p>
-<ul>
-<li>TODO</li>
-</ul>
-<section id="partial-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="partial-solutions">Partial Solutions</h2>
-<ul>
-<li>TODO</li>
-</ul>
-</section>
+<p><span class="citation" data-cites="jlm-lpt-98">Jünger, Leipert, and Mutzel (<a href="#ref-jlm-lpt-98" role="doc-biblioref">1998</a>)</span> give a linear-time algorithm for testing level planarity. While the dissertation by <span class="citation" data-cites="lei-lpt-98">Leipert (<a href="#ref-lei-lpt-98" role="doc-biblioref">1998</a>)</span> describes a prototypical implementation, no implementations exist of this algorithm. <span class="citation" data-cites="brue-pvf-21">Brückner (<a href="#ref-brue-pvf-21" role="doc-biblioref">2021</a>)</span> gives an alternative linear-time algorithms and points out some issues with the algorithm by <span class="citation" data-cites="jlm-lpt-98">Jünger, Leipert, and Mutzel (<a href="#ref-jlm-lpt-98" role="doc-biblioref">1998</a>)</span>. Simpler algorithms with a super-linear runtime have been proposed <span class="citation" data-cites="hh-plp-07 rsb-asf-01 brs-lpt-22 fpss-hmd-12">(<a href="#ref-hh-plp-07" role="doc-biblioref">Harrigan and Healy 2007</a>; <a href="#ref-rsb-asf-01" role="doc-biblioref">Randerath et al. 2001</a>; <a href="#ref-brs-lpt-22" role="doc-biblioref">Brückner, Rutter, and Stumpf 2022</a>; <a href="#ref-fpss-hmd-12" role="doc-biblioref">Fulek et al. 2012</a>)</span>. For these, we could only find an implementation by <span class="citation" data-cites="efk-gat-10">Estrella-Balderrama, Fowler, and Kobourov (<a href="#ref-efk-gat-10" role="doc-biblioref">2010</a>)</span> for the quadratic algorithm by <span class="citation" data-cites="hh-plp-07">Harrigan and Healy (<a href="#ref-hh-plp-07" role="doc-biblioref">2007</a>)</span>.</p>
 </section>
 <section id="related-problems" class="level1">
 <h1>Related Problems</h1>
+<p>Trivially reduces to <span><a href="../problems/proper-cl.html">Proper Clustered Level Planarity</a></span> by making the instances proper (i.e., inserting subdivision vertices on edges spanning multiple levels) and adding all vertices to the same (root-)cluster <span class="citation" data-cites="dloz-pgw-15">(<a href="#ref-dloz-pgw-15" role="doc-biblioref">Da Lozzo 2015</a>, Theorem 7.4)</span>.</p>
+<p>Reduces to <span><a href="../problems/strip.html">Strip Planarity</a></span> by converting each level to three strips and subdividing the edges appropriately <span class="citation" data-cites="dloz-pgw-15">(<a href="#ref-dloz-pgw-15" role="doc-biblioref">Da Lozzo 2015</a>, Theorem 9.3)</span>.</p>
+<p>Reduces to <span><a href="../problems/radial-level.html">Radial Level Planarity</a></span> by adding a single edge that spans from the lowest to the highest level, at which the radial drawing can be cut to a planar one <span class="citation" data-cites="sch-tat-13">(<a href="#ref-sch-tat-13" role="doc-biblioref">Schaefer 2013</a>, Lemma 6.12)</span>.</p>
+</section>
+<section id="see-also" class="level1">
+<h1>See Also</h1>
 <ul>
-<li>Reduces to <a href="../problems/proper-cl.html">Proper Clustered Level Planarity</a></li>
-<li>Reduces to <a href="../problems/strip.html">Strip Planarity</a></li>
-<li>Reduces to <a href="../problems/radial-level.html">Radial Level Planarity</a></li>
+<li>Planarity Variants for Directed Graphs <span class="citation" data-cites="brue-pvf-21">Brückner (<a href="#ref-brue-pvf-21" role="doc-biblioref">2021</a>)</span></li>
 </ul>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-brue-pvf-21" class="csl-entry" role="listitem">
+Brückner, Guido. 2021. <span>“Planarity Variants for Directed Graphs.”</span> PhD thesis, Karlsruhe Institute of Technology, Germany. <a href="https://nbn-resolving.org/urn:nbn:de:101:1-2021080405022988868936">https://nbn-resolving.org/urn:nbn:de:101:1-2021080405022988868936</a>.
+</div>
+<div id="ref-brs-lpt-22" class="csl-entry" role="listitem">
+Brückner, Guido, Ignaz Rutter, and Peter Stumpf. 2022. <span>“Level-Planarity: Transitivity Vs. Even Crossings.”</span> <em>The Electronic Journal of Combinatorics</em> 29 (4). <a href="https://doi.org/10.37236/10814">https://doi.org/10.37236/10814</a>.
+</div>
+<div id="ref-dloz-pgw-15" class="csl-entry" role="listitem">
+Da Lozzo, Giordano. 2015. <span>“Planar Graphs with Vertices in Prescribed Regions:models, Algorithms, and Complexity.”</span> PhD thesis, Roma Tre University. <a href="http://www.dia.uniroma3.it/~dalozzo/files/phd-thesis-giordano-dalozzo.pdf">http://www.dia.uniroma3.it/~dalozzo/files/phd-thesis-giordano-dalozzo.pdf</a>.
+</div>
+<div id="ref-efk-gat-10" class="csl-entry" role="listitem">
+Estrella-Balderrama, Alejandro, J. Joseph Fowler, and Stephen G. Kobourov. 2010. <span>“GraphSET, a Tool for Simultaneous Graph Drawing.”</span> <em>Software: Practice and Experience</em> 40 (10): 849–63. <a href="https://doi.org/10.1002/spe.958">https://doi.org/10.1002/spe.958</a>.
+</div>
+<div id="ref-fpss-hmd-12" class="csl-entry" role="listitem">
+Fulek, Radoslav, Michael J. Pelsmajer, Marcus Schaefer, and Daniel Štefankovič. 2012. <span>“Hanani<span></span>tutte, Monotone Drawings, and Level-Planarity.”</span> In <em>Thirty Essays on Geometric Graph Theory</em>, 263–87. Springer New York. <a href="https://doi.org/10.1007/978-1-4614-0110-0_14">https://doi.org/10.1007/978-1-4614-0110-0_14</a>.
+</div>
+<div id="ref-hh-plp-07" class="csl-entry" role="listitem">
+Harrigan, Martin, and Patrick Healy. 2007. <span>“Practical Level Planarity Testing and Layout with Embedding Constraints.”</span> In <em>Graph Drawing, 15<sup>th</sup> International Symposium, <span>GD</span> 2007, Sydney, Australia, September 24-26, 2007. Revised Papers</em>, edited by Seok-Hee Hong, Takao Nishizeki, and Wu Quan, 4875:62–68. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/978-3-540-77537-9\_9">https://doi.org/10.1007/978-3-540-77537-9\_9</a>.
+</div>
+<div id="ref-jlm-lpt-98" class="csl-entry" role="listitem">
+Jünger, Michael, Sebastian Leipert, and Petra Mutzel. 1998. <span>“Level Planarity Testing in Linear Time.”</span> In <em>Graph Drawing, 6<sup>th</sup> International Symposium, GD’98, Montr<span>é</span>al, Canada, August 1998, Proceedings</em>, edited by Sue Whitesides, 1547:224–37. Lecture Notes in Computer Science. Springer. <a href="https://doi.org/10.1007/3-540-37623-2_17">https://doi.org/10.1007/3-540-37623-2_17</a>.
+</div>
+<div id="ref-lei-lpt-98" class="csl-entry" role="listitem">
+Leipert, Sebastian. 1998. <span>“Level Planarity Testing and Embedding in Linear Time.”</span> PhD thesis, Universit<span>ä</span>t zu K<span>ö</span>ln.
+</div>
+<div id="ref-rsb-asf-01" class="csl-entry" role="listitem">
+Randerath, Bert, Ewald Speckenmeyer, Endre Boros, Peter L. Hammer, Alexander Kogan, Kazuhisa Makino, Bruno Simeone, and Ondrej Cepek. 2001. <span>“A Satisfiability Formulation of Problems on Level Graphs.”</span> <em>Electron. Notes Discret. Math.</em> 9: 269–77. <a href="https://doi.org/10.1016/S1571-0653(04)00327-0">https://doi.org/10.1016/S1571-0653(04)00327-0</a>.
+</div>
+<div id="ref-sch-tat-13" class="csl-entry" role="listitem">
+Schaefer, Marcus. 2013. <span>“Toward a Theory of Planarity: Hanani-Tutte and Planarity Variants.”</span> <em>Journal of Graph Algorithms and Applications</em> 17 (4): 367–440. <a href="https://doi.org/10.7155/jgaa.00298">https://doi.org/10.7155/jgaa.00298</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
